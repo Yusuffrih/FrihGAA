@@ -1,6 +1,10 @@
 # FrihGAA
 ![Am I responsive image to go here]()
 
+FrihGAA is my final project for the Code Institute's Professional Diploma. It is a Web Application for a fictional GAA club that satisfies the requirements of this assessment. The brief provided for this project in the Assessment handbook was to 
+
+*"build a full-stack site based around business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product/service."*
+
 - [User Experience (UX)](#user-experience--ux-)
   * [Site Owner Goals](#site-owner-goals)
   * [User Goals](#user-goals)
