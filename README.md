@@ -76,16 +76,91 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
 ### User Expectations
 
 ## Design Choices
-
 ### Fonts
+For the fonts on the site, I used [Google Fonts](https://fonts.google.com/?standard-styles=). This is a really fantatic service of [Google](https://google.com) which is great for getting nearly any kind of font you want. The fonts I chose for my page are *Lato* & *Roboto* with *sans-serif* as a backup font in the event that [Google Fonts](https://fonts.google.com/?standard-styles=) does not work. The reason I decided to use *Lato* & *Roboto* is that I found them to be quite sleek fonts which would almost represent a pair of football boots. 
 
 ### Colours
+I used [Coolors](https://coolors.co/) to assist in generating a colour scheme for the site. This is a great site as it gives you the codes of the colours you want in any form you want ie. Hex codes for my site. 
+The colour scheme I have chosen for the site is White (#FFFFFF) and Maroon (#800000). The reasons for this choice is that they are the same colours as my own GAA club.
 
 ### Icons 
+I have gone to [Font Awesome](https://fontawesome.com/) for the icons that I have used in the site. The icons, I feel just add a little bit extra to the site in terms of style and make it a bit more visually appealing which ultimately provides a better User Experience.
 
 ### Wireframes
+When creating my wireframes, I first drew some rough sketches on paper but then decided that [Balsamiq](https://balsamiq.com/) would be the most suitable technology to use to assist with the design of the site.
+
+You will see from the wireframes that a lot has changed since the planning stage of the project as I learned a lot about what direction I wanted the project to go as I went through the development process.
+
+I created mock ups for my page to fit into the main device types - Desktop, Tablet and Mobile. The mock-ups for the devices can be found here: 
+* [Mobile]()
+* [Tablet]()
+* [Desktop]()
+
 
 ### Data Schema
+Django is compatible with SQL databases by default and so I used SQLite in development and then used a PostgresQL database in the deployed site which is provided by [Heroku](https://id.heroku.com/login). 
+
+**User model**
+
+Django provides, via django.contrib.auth.models, a ready to use User model which is what is being utilised in this project.
+
+#### Profiles App
+**Profile model**
+
+| Name | Database Key | Field Type | Type Validation |
+| :-------------: |:----------------:| :--------------: | :---------: |
+|User | user |	OneToOneField 'User'| on_delete=models.CASCADE
+|Membership | membership |	BooleanField | default=False, null=True, blank=True
+|Default Phone Number |	default_phone_number | CharField | max_length=20, null=True, blank=True
+|Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
+|Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
+|Default Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+|Default Street Address1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+|Default Street Address2 | default_street_address2 | CharField | max_length=80, null=True, blank=True
+
+### Products App
+**Category model**
+
+| Name | Database Key | Field Type | Type Validation |
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Name | name | CharField | max_length=254
+|Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True
+
+**Product model**
+
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Product id | id | primary_key=True | AutoField
+|Name | name | default='', max_length=254 | CharField
+|SKU | sku | max_length=254, null=True, blank=True | CharField
+|Description | content | blank=False | TextField
+|Has Sizes | has_sizes | BooleanField | default=False, null=True, blank=True
+|Price | price | max_digits=6, decimal_places=2 | DecimalField
+|Image| image| blank=False | ImageField
+|Rating | rating | blank=True | DecimalField
+
+### Membership App
+**Membership model**
+| Name | Database Key | Validation | Field Type|
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Membership id | id | primary_key=True | AutoField
+|Name | name | default='', max_length=254 | CharField
+|SKU | sku | max_length=254, null=True, blank=True | CharField
+|Description | content | blank=False | TextField
+|Has Sizes | has_sizes | BooleanField | default=False, null=True, blank=True
+|Price | price | max_digits=6, decimal_places=2 | DecimalField
+|Image| image| blank=False | ImageField
+
+
+
+**Category model**
+
+| Name | Database Key | Field Type | Type Validation |
+| :-------------: |:----------------:| :--------------: | :---------: |
+|Name | name | CharField | max_length=254
+|Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True
+
+
 
 ## Features
 
