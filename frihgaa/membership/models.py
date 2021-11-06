@@ -1,1 +1,46 @@
+import uuid
+
+from datetime import datetime, timedelta
 from django.db import models
+
+from product.models import Product
+from account.models import UserProfile
+
+
+class Membership(models.Model):
+    user_profile = models.ForeignKey(
+        UserProfile,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        relate_name='orders')
+    product = models.ForeignKey(
+        Product,
+        null=True,
+        blank=True,
+        on_delete=models.DO_NOTHING
+        )
+    membership_number = models.UUIDField(
+        default=uuid.uuid4().hex.upper(),
+        unique=True,
+        editable=False
+        )
+    active = models.BooleanField(
+        default=False,
+        null=True,
+        blank=True
+        )
+    date_activated = models.DateField(
+        auto_now=True
+        )
+    expiry_date = models.DateTimeField(
+        null=True,
+        blank=True
+        )
+
+    def save(self, *args, **kwargs):
+        if self.date_activated and not self.expiry_date:
+            date_activated_days = self.date_activated.timedelta().days()
+            self.expiry_date = datetime.now() + timedelta(
+                days=date_activated_days)
+        super(Membership, self).save(*args, **kwargs)
