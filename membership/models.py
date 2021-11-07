@@ -4,16 +4,9 @@ from datetime import datetime, timedelta
 from django.db import models
 
 from product.models import Product
-from account.models import UserProfile
 
 
 class Membership(models.Model):
-    user_profile = models.ForeignKey(
-        UserProfile,
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name='orders')
     product = models.ForeignKey(
         Product,
         null=True,
