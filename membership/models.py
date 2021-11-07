@@ -13,7 +13,7 @@ class Membership(models.Model):
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        relate_name='orders')
+        related_name='orders')
     product = models.ForeignKey(
         Product,
         null=True,
