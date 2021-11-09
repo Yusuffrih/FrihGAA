@@ -9,12 +9,21 @@
         <meta name="Description" content="Enter your description here"/>
     {% endblock %}
 
-    {% block corejs %}
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block extra_css%}
+    {% endblock %}
+
+    {% block core_css %}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     {% endblock %}
 
-    {% block corejs %}
+    {% block extra_js %}
+    {% endblock %}
+
+    {% block core_js %}
         <!-- Bootstrap Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
@@ -25,7 +34,20 @@
 
 </head>
 <body>
+    <header class="container-fluid fixed-top"></header>
 
-    
+    {% if messages %}
+        <div class="message-container"></div>
+    {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postload_js %}
+    {% endblock %}
+
 </body>
 </html>
