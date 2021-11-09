@@ -43,9 +43,11 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
 **As the site owner, I would like:**
 * Access the admin section of the site
 * To Create, Read, Update and Delete items in the database from a centralised location through the admin app
-* My club members to be able to purchase Membership via the site
+* Club members to be able to easily purchase Membership via the site
 * To sell club merchandise through the site
 * Customers to be able to rate and review the merchandise so I know the popular items
+* Give the club a professional look and feel to attract new members
+* To provide information to club members and the public about matches the club will be involved in
 
 ### User Stories
 **As a user, I want to:**  
