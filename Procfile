@@ -1,1 +1,1 @@
-web: genuicorn django_frihgaa.wsgi:application
+web: genuicorn frihgaa.wsgi:application
