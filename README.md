@@ -191,6 +191,8 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 
 ## Deployment
 
+Note: When deploying my project initially, I pushed my database url to Github. Luckily, I had no data in my database and it was easy for me to delete my postgres database and create a new one. This nuetralised any threat that there may have been to the app.
+
 ### Run Locally
 
 ### Deploying in Heroku
