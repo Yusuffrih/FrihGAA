@@ -108,15 +108,11 @@ WSGI_APPLICATION = 'frihgaa.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse('postgres://jfggsdmofsnblq:c6f1e3d1e366e53d084a008bba78317df0c50026838eae3a695e3214cf577666@ec2-54-76-249-45.eu-west-1.compute.amazonaws.com:5432/da23frgtm0cv7c')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
