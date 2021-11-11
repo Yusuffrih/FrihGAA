@@ -187,9 +187,31 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 
 
 ## Technologies Used
+
 ### Languages
+* HTML
+* CSS
+* Javacript
+* Python
+
 ### Frameworks & Libraries
+* Bootstrap
+* Google Fonts
+* Font Awesome
+* JQuery
+* Stripe
+
 ### Tools
+* Heroku
+* Django
+* Gitpod
+* Git
+* Balsamic
+* DrawSQL
+* W3 HTML Validation
+* W3 CSS Validation
+* AWS
+* SQLite3
 
 ## Testing
 
