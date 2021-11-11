@@ -166,7 +166,25 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 
 ## Features
 
-## Features Yet To Implement
+### Features Implemented
+* User Authentication using Allauth. This allows login, logout, email verifation and other features.
+* The club shop, givin the users the ability to browse and purchase club merchandise
+* Product categorisation giving the users the ability to quickly search for certain types of products they are looking for 
+* Membership area of the site, giving the users the ability to browse and purchase different membership types
+* For each product and membership, there is a product or membership details page which outlines the details of that particular product or membership
+* Search bar functionality, giving the users the ability to search the site for products & memberships by name or category
+* 'Sort by' feature giving the users the ability to sort the products list by price, size, category, and other criteria
+* Online payments feature made available via Stripe
+* Matches page on the site that allows the users to keep up to date with the club's match activity
+* Different sections on the matches page for each of the different age groups in the club so that users can search the matches for the team that is of interest to them
+* Gallery of pictures of the club's facilities to entice non-member site users to join the club
+* A contact form for site users to contact the club administrator and provide feedback, suggest improvements or just ake queries
+
+
+### Features Yet To Implement
+* Club news page where members can keep up to date with the different club activities such as fundraisers
+* Club gym booking form to be able to book a slot that you can use the gym facility
+
 
 ## Technologies Used
 ### Languages
