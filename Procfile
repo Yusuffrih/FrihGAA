@@ -1,1 +1,1 @@
-web: genuicorn frihgaa.wsgi:application
+web: gunicorn frihgaa.wsgi:application
