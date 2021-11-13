@@ -233,6 +233,106 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 
 Note: When deploying my project initially, I pushed my database url to Github. Luckily, I had no data in my database and it was easy for me to delete my postgres database and create a new one. This nuetralised any threat that there may have been to the app.
 
+### Deploying Locally
+
+[Gitpod](https://gitpod.io/) was used for the development of this project and so the following deployments step-by-step process is specific to [Gitpod](https://gitpod.io/) and may vary with other [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment). 
+
+#### Cloing
+1. Once you are at the project repository in [Github](https://github.com/), you click on the code button and then download the repository zip file. Another way to do it is to use the following code in the terminal:
+``` 
+git clone https://github.com/Yusuffrih/CI_MS4_FrihGAA.git
+```
+2. Once this is done, you then install the project requirements using the command: 
+```
+pip3 install -r requirements.txt
+```
+3. Create any sensitive or private environment variables in you IDE settings. This will ensure that they are not in the code that is being pushed to the public repository. 
+![Gitpod environment variables screenshot goes here]()
+4. Then you have to migrate the models to create the database using the following command.
+```
+python3 manage.py migrate
+```
+5. The next step then is to a create superuser and password for the app. This is done using the following command in the terminal.
+```
+python3 manage.py createsuper
+```
+Once the command is entered, you will be prompted to input the username, email address for the user account and then password. You will be required to input the password twice. The input details will not appear on screen, but they are being registered.
+6. At this stage, the app is up and running and you can run it using the below command in the terminal: (note - to access the admin section of the app, add */admin* to the end of the URL)
+```
+python3 manage.py runserver
+```
+
+### Heroku
+1. Create a [Heroku](https://id.heroku.com/) or login to create a new app. Once you have chosen a Heroku app name, you must then choose the region that is closest to you. Ensure your app is connected to the relevant [Github](https://github.com/) repository to allow for automatic deployment to [Heroku](https://heroku.com/).
+2. The default database that is installed with [Django](https://www.djangoproject.com/) is [SQLite3](https://www.sqlite.org/releaselog/3_36_0.html). However, when you deploy to [Heroku](https://id.heroku.com/) and go to production mode, you will want to change to another database such as [Postgres](https://www.postgresql.org/). To add this to your project, go to resources and search *Postgres*. Click on it and submit the order form.
+
+3. This will provide you with a database url for your project. To access it, go to settings in [Heroku](https://id.heroku.com/) and reveal the *Config Vars*.
+![Config Variables screenshot here]()
+
+4. Copy and paste the Environment Variavle into your settings.py file instead of the database that is there already. 
+```
+DATABASES = {
+        'default': dj_database_url.parse('Postgres URL here')
+    }
+```
+**NOTE** do not push this Database URL to your [Github](https://github.com/) repository.
+
+5. Once this is in place, then run your migrations:
+```
+python3 manage.py migrate
+```
+
+6. Once migrations are complete, you will have to create a superuser in the new database. To do this use the following command:
+```
+python3 manage.py createsuperuser
+```
+Once the command is entered, you will be prompted to input the username, email address for the user account and then password. You will be required to input the password twice. The input details will not appear on screen, but they are being registered.
+
+7. Run the app and visit the admin page at https://yourlivesiteurl.herokuapp.com/admin/ and add the email address. Then ensure that verified and primary checkboxes are clicked.
+
+8. You will need to load your data to the [Postgres](https://www.postgresql.org/) database using the following command:
+```
+python3 manage.py loaddata <your-fixtures-filename>
+```
+ensure to repeat this for all your fixtures and to load categories before loading the main model for the app.
+
+9. Once the migrations are complete and the data is loaded into the database, change the database configuration to a conditional one whereby it uses the [SQLite3](https://www.sqlite.org/releaselog/3_36_0.html) database for development purposes and the [Postgres](https://www.postgresql.org/) one in production. Do this by creating a new environment variable in the Gitpod variables section.
+```
+if 'DATABASE_URL' in os.environ:
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+    else:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+        }
+```
+
+10. You will need to set up a Procfile using the following command:
+```
+echo web: python app.py > Procfile
+```
+The Procfile just needs to have one line of code in it: 
+```
+web: gunicorn <your-app-name>.wsgi:application
+```
+
+11. Ensure that you have the requirements.txt file up to date using the following command:
+```
+pip freeze --local > requirements.txt
+```
+
+12. Ensure to add your Heroku URL to the `ALLOWED_HOSTS` settings.py file to ensure that the site works. Also ensure that you add `'localhost'` to allow for development
+
+13. Add, commite and push all your changes to [Github](https//:github.com/).
+
+14. Return to the deploy section in the [Heroku](https://heroku.com/) app and enable automatic deployment. 
+
+15. Click the deploy button. The app should start building now. As you have linked the [Heroku](https://heroku.com/) app to your [Github](https//:github.com/) repository, all you need to do to deploy to Heroku is push to [Github](https//:github.com/) and this will automatically push to [Heroku](https://heroku.com/).
+
 ### Run Locally
 
 ### Deploying in Heroku
