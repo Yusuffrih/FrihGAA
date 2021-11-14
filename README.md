@@ -83,7 +83,7 @@ For the fonts on the site, I used [Google Fonts](https://fonts.google.com/?stand
 
 ### Colours
 I used [Coolors](https://coolors.co/) to assist in generating a colour scheme for the site. This is a great site as it gives you the codes of the colours you want in any form you want ie. Hex codes for my site. 
-The colour scheme I have chosen for the site is White (#FFFFFF) and Maroon (#800000). The reasons for this choice is that they are the same colours as my own GAA club.
+The colour scheme I have chosen for the site is Black(#0B0909), White (#FFFFFF) and Maroon (#800000). The reasons for this choice is that they are the same colours as my own GAA club.
 
 ### Icons 
 I have gone to [Font Awesome](https://fontawesome.com/) for the icons that I have used in the site. The icons, I feel just add a little bit extra to the site in terms of style and make it a bit more visually appealing which ultimately provides a better User Experience.
