@@ -1,0 +1,24 @@
+:root{
+    --rich-black-fogra : #0B0909;
+    --white:#FFFFFF;
+    --maroon-web:#800000;
+
+    --delete-red:#d60f22;
+    --edit-grey:#8a8784;
+
+    --transition: 0.5s;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
