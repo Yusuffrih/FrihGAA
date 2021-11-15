@@ -14,7 +14,7 @@ class Membership(models.Model):
         on_delete=models.DO_NOTHING
         )
     membership_number = models.UUIDField(
-        default=uuid.uuid4().hex.upper(),
+        default=uuid.uuid4().hex.upper()[:8],
         unique=True,
         editable=False
         )
