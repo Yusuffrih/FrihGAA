@@ -1,4 +1,4 @@
-# FrihGAA
+xt# FrihGAA
 ![Am I responsive image to go here]()
 
 FrihGAA is my final project for the Code Institute's Professional Diploma. It is a Web Application for a fictional GAA club that satisfies the requirements of this assessment. The brief provided for this project in the Assessment handbook was to 
@@ -231,13 +231,14 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 
 ## Deployment
 
-Note: When deploying my project initially, I pushed my database url to Github. Luckily, I had no data in my database and it was easy for me to delete my postgres database and create a new one. This nuetralised any threat that there may have been to the app.
+Note: When deploying my project initially, I pushed my database url to Github. Luckily, I had no data in my database and it was easy for me to delete my postgres database and create a new one. This nuetralised any threat that there may have been to the app. Also, committed and pushed SQLite3 Database & SECRET_KEY to the [Github](https://github.com) repository, however, I deleted a the SQLite3 Database, created a new one and added it to the .gitignore file. I also generated a new SECRET_KEY and stored it as an environment variable in [Gitpod](https://gitpod.io).
+
 
 ### Deploying Locally
 
 [Gitpod](https://gitpod.io/) was used for the development of this project and so the following deployments step-by-step process is specific to [Gitpod](https://gitpod.io/) and may vary with other [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment). 
 
-#### Cloing
+#### Cloning
 1. Once you are at the project repository in [Github](https://github.com/), you click on the code button and then download the repository zip file. Another way to do it is to use the following code in the terminal:
 ``` 
 git clone https://github.com/Yusuffrih/CI_MS4_FrihGAA.git
