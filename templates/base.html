@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="Description" content="Enter your description here"/>
+        <meta name="Description" content="Website for Frih GAA club where users can buy club products and membership"/>
     {% endblock %}
 
     {% block extra_meta %}
@@ -45,41 +45,43 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'home' %}">Frih GAA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'products' %}">Club Shop</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'memberships' %}">Membership</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                Account
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                </div>
-            </li>
-          </ul>
-          <form form-inline my-2 my-lg-0 method="GET" action="">
-                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                        <i class="fas fa-search"></i> Search
-                    </button>
-                </div>
-          </form>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}">Club Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'memberships' %}">Membership</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                    <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                    </div>
+                </li>
+            </ul>
+            <form form-inline my-2 my-lg-0 method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-outline-success my-2 my-sm-0" type="submit">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+            </form>
         </div>
     </nav>
 
