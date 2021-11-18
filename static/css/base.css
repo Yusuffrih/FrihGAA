@@ -17,10 +17,28 @@ html {
 
 body {
     font-family: 'Lato', 'Roboto', sans-serif;
+    color: #0B0909;
     font-size: 2rem;
     text-align: center;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.club-flag {
+    width: 100%;
+    height: 60vh;
+    border: 1px var(--maroon-web) solid;
+    display: flex;
+}
+
+.flag-maroon {
+    height: 100%;
+    background-color: var(--maroon-web);
+}
+
+.flag-white {
+    height: 100%;
+    background-color:var(--white);
 }
