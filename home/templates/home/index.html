@@ -2,5 +2,27 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="display-4 text-success">It Works!</h1>
+    <div class="container-fluid">
+        <section class="row">
+            <div class="club-flag">
+                <div class="col-6 flag-maroon">
+                    <button type="button" class="btn btn-lg"><i class="fas fa-shopping-bag d-block"></i>Shop Now!</button>
+                </div>
+                <div class="col-6 flag-white">
+                    <button type="button" class="btn btn-lg"><i class="fas fa-users d-block"></i>Become a Member</button>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-sm-12 col-md-4">
+                <h2 class="text-center">About</h2>
+                <img src="media/castletown-logo.jpeg" alt="club-logo">
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo libero facere! Odit quo tempora accusamus, ipsa iste vel iusto aliquid nesciunt tenetur consequatur similique, culpa veritatis vero quidem. Obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, illum! Suscipit a dolores reiciendis architecto velit error impedit ab eveniet similique maiores, nam dignissimos iure! Reprehenderit minus aliquid perspiciatis reiciendis?
+                </p>
+            </div>
+        </section>
+    </div>
 {% endblock %}
