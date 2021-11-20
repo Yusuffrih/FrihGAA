@@ -27,6 +27,19 @@ body {
     min-height: 100vh;
 }
 
+/* headings */
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+h3 {
+    font-style: italic;
+}
+
+/* index */
+
 .club-flag {
     width: 100%;
     height: 60vh;
