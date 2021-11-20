@@ -17,7 +17,8 @@ html {
 
 body {
     font-family: 'Lato', 'Roboto', sans-serif;
-    color: #0B0909;
+    color: var(--white);
+    background-color: var(--rich-black-fogra);
     font-size: 2rem;
     text-align: center;
     margin: 0 auto;
@@ -41,4 +42,100 @@ body {
 .flag-white {
     height: 100%;
     background-color:var(--white);
+}
+
+/* navbar */
+
+.navbar {
+    border-bottom: 1px solid var(--white);
+}
+
+.navbar-dark .navbar-brand {
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: var(--maroon-web);
+}
+
+.navbar {
+    background-color: var(--rich-black-fogra);
+}
+
+.navbar-dark .navbar-toggler,
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.navbar-dark .navbar-toggler,
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--maroon-web) ;
+}
+
+#search-input {
+    width: 25vw;
+    margin-right: 3rem;
+}
+
+/* social media */
+
+.social-media {
+    background-color: var(--rich-black-fogra);
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+    padding: 1rem;
+}
+
+.social-media li a {
+    color: var(--white);
+}
+
+.social-media li a i {
+    font-size: 2.5rem;
+}
+/* footer */
+
+footer {
+    background-color: var(--rich-black-fogra);
+    margin-top: auto;
+    padding: 1rem, 0, 1rem ,0;
+    border-top: 1px solid var(--white);
+}
+
+.address-line {
+    display: block;
+    color: #FFFFFF;
+}
+
+.contact {
+    list-style: none;
+    margin: 5px;
+    padding-left: 0;
+}
+
+.contact li {
+    display: block;
+    padding: 5px;
+    margin: 4px;
+    font-size: 2rem;
+}
+
+.contact li a {
+    color: var(--white);
+    font-size: 100%;
+}
+
+.footer-contact {
+    font-size: 100%;
+    vertical-align: top;
+    padding-right: 4px;
 }

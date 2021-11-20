@@ -42,7 +42,7 @@
         <div class="message-container"></div>
     {% endif %}
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="{% url 'home' %}">Frih GAA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -73,10 +73,10 @@
                 </li>
             </ul>
             <form form-inline my-2 my-lg-0 method="GET" action="">
-                    <div class="input-group w-100">
-                        <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
+                    <div class="input-group">
+                        <input id="search-input" class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-outline-success my-2 my-sm-0" type="submit">
+                            <button class="form-control btn btn-light my-2 my-sm-0" type="submit">
                                 <i class="fas fa-search"></i> Search
                             </button>
                         </div>
@@ -84,12 +84,60 @@
             </form>
         </div>
     </nav>
+    <div class="row">
+        <div class="col-sm-12 justify-content-center">
+            <ul class="social-media">
+                <li>
+                    <a href="https://www.facebook.com/yusuffrih" aria-label="Site Owner Facebook Link" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/yusuffrih" aria-label="Site Owner Instagram Link" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" aria-label="Site Owner Youtube Link" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/yusuffrih" aria-label="Site Owner LinkedIn Link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
 
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-6 col-lg-4 justify-content-center">
+                    <ul class="contact">
+                        <li>
+                            <a href="mailto:yusuffrih@hotmail.com" aria-label="Contact Email Address" target="_blank">
+                                <span class="footer-contact">yusuffrih@hotmail.com</span><i class="fas fa-envelope-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:00355552536879" aria-label="Contact Phone Number" target="_blank">
+                                <span class="footer-contact">05552536879</span><i class="fas fa-phone-square-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-lg-4 justify-content-center">
+                    <p>
+                        <span class="address-line">Frih GAA,</span>
+                        <span class="address-line">Tomnahealy,</span>
+                        <span class="address-line">Castletown,</span>
+                        <span class="address-line">Co. Wexford</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     {% block postload_js %}
     {% endblock %}
