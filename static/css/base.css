@@ -115,6 +115,7 @@ h3 {
 .social-media li a i {
     font-size: 2.5rem;
 }
+
 /* footer */
 
 footer {
@@ -151,4 +152,46 @@ footer {
     font-size: 100%;
     vertical-align: top;
     padding-right: 4px;
+}
+
+/* allauth-form-main-content */
+
+.allauth-form-main-content {
+    margin: 2rem, 0 , 2rem;
+}
+
+.allauth-form-main-content :nth-child(2) {
+    font-size: 1.6rem;
+}
+
+.allauth-form-main-content a {
+    color: var(--maroon-web);
+    text-decoration: none;
+}
+
+.allauth-form-main-content a:hover {
+    color: var(--white);
+    text-decoration: underline;
+    font-size: 2.1rem;
+    transition: var(--transition);
+}
+
+.allauth-form-main-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-main-content input:not([type='checkbox']) {
+    width: 100%;
+}
+
+.allauth-form-main-content button {
+    background-color: var(--maroon-web);
+    color: var(--white);
+    border-radius: .5rem;
+}
+
+.allauth-form-main-content button:hover {
+    background-color: var(--white);
+    color: var(--maroon-web);
+    transition: var(--transition);
 }
