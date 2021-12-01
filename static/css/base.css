@@ -195,3 +195,7 @@ footer {
     color: var(--maroon-web);
     transition: var(--transition);
 }
+
+.card {
+    color: #0B0909;
+}
