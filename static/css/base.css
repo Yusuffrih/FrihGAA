@@ -9,6 +9,7 @@
     --edit-grey:#8a8784;
 
     --transition: 0.5s;
+    --border-radius: 5%;
 }
 
 html {
@@ -25,6 +26,26 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+/* Buttons */
+
+.white-btn,
+.maroon-btn {
+    border: 1px solid var(--rich-black-fogra);
+    border-radius: var(--border-radius);
+    min-width: 15rem;
+    margin: 0 auto;
+    margin-top: 15rem;
+}
+
+.white-btn {
+    background-color: var(--white);
+}
+
+.maroon-btn {
+    background-color: var(--maroon-web);
+    color: var(--white);
 }
 
 /* headings */
@@ -50,12 +71,15 @@ h3 {
 .flag-maroon {
     height: 100%;
     background-color: var(--maroon-web);
+    position: relative;
 }
 
 .flag-white {
     height: 100%;
     background-color:var(--white);
+    position: relative;
 }
+
 
 /* navbar */
 
