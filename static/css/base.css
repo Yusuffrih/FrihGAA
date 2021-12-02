@@ -83,8 +83,28 @@ h3 {
 
 /* navbar */
 
-.navbar {
-    border-bottom: 1px solid var(--white);
+header {
+    background-color: var(--rich-black-fogra);
+    color: var(--white);
+}
+
+.navbar-brand {
+    font-size: 3rem;
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.navbar-brand:hover {
+    color: var(--maroon-web);
+    text-decoration: underline var(--maroon-web);
+}
+
+.nav-link {
+    color: var(--white);
+}
+
+.nav-link:hover {
+    color: var(--maroon-web);
 }
 
 .navbar-dark .navbar-brand {
@@ -97,6 +117,10 @@ h3 {
 
 .navbar-dark .navbar-brand:hover {
     color: var(--maroon-web);
+}
+
+.dropdown-menu {
+    background-color: var(--edit-grey);
 }
 
 .navbar {
@@ -123,6 +147,13 @@ h3 {
 
 .nav-item .dropdown-item {
     font-size: 1.6rem;
+    color: var(--white);
+}
+
+.nav-item .dropdown-item:hover {
+    background-color: var(--rich-black-fogra);
+    font-size: 1.6rem;
+    color: var(--maroon-web);
 }
 
 /* social media */
@@ -226,4 +257,39 @@ footer {
 
 .card {
     color: #0B0909;
+}
+
+/* Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
 }
