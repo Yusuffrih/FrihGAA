@@ -121,6 +121,10 @@ h3 {
     margin-right: 3rem;
 }
 
+.nav-item .dropdown-item {
+    font-size: 1.6rem;
+}
+
 /* social media */
 
 .social-media {
