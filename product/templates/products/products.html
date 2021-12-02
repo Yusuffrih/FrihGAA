@@ -7,14 +7,12 @@
             <div class="col-12">
                 <h1>Club Shop</h1>
             </div>
-            <div class="col-12 mb-4">
-                <h3>Look like a team, play like a team!</h3>
-            </div>
         </div>
+        
         <div class="row">
             <div class="col-10 offset-1 products-container">
                 <div class="row">
-                    
+
                 </div>
                 <div class="row">
                     {% for product in products %}
@@ -34,9 +32,18 @@
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
-                                    <div class="col">
-                                        <p class="mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    <div class="col-12">
+                                        <p class="mb-0 font-weight-bold">${{ product.price }}</p>
                                     </div>
+                                    {% if product.category %}
+                                    <div class="col-12">
+                                        <p class="small text-left mt-1 mb-0">
+                                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                    </div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
