@@ -1,5 +1,10 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="nav-link text-white mr-5" style="font-size: 20px;" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Club Shop
@@ -20,7 +25,7 @@
                 <a class="dropdown-item" href="{% url 'products' %}?category=shorts">Shorts</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=tops">Tops</a>
                 <a class="dropdown-item" href="{% url 'products' %}?category=jackets">Jackets</a>
-                <a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Clothing</a>
+                <a href="{% url 'products' %}?category=socks,shorts,tops,jackets" class="dropdown-item">All Gear</a>
             </div>
         </li>
 
@@ -29,11 +34,11 @@
                 Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a class="dropdown-item" href="{% url 'products' %}?category=socks">Balls</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=shorts">Gloves</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=tops">Mouthguards</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=jackets">Helmets</a>
-                <a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Equipment</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=balls">Balls</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=gloves">Gloves</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=mouthguards">Mouthguards</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=helmets">Helmets</a>
+                <a href="{% url 'products' %}?category=balls,gloves,mouthguards,helmets" class="dropdown-item">All Equipment</a>
             </div>
         </li>
 
@@ -42,14 +47,13 @@
                 Membership
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a class="dropdown-item" href="{% url 'products' %}?category=socks">Adults</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=shorts">Students</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=tops">Family</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=jackets">Child</a>
-                <a class="dropdown-item" href="{% url 'products' %}?category=jackets">Offers</a>
-                <a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Memberships</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=adults">Adults</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=students">Students</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=family">Family</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=child">Child</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=offers">Offers</a>
+                <a href="{% url 'products' %}?category=adults,students,family,child,offers" class="dropdown-item">All Memberships</a>
             </div>
         </li>
-
     </ul>
 </div>
