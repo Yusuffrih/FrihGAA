@@ -100,7 +100,7 @@
     </div>
 {% endblock %}
 {% block postloadjs %}
-    {{ block.super }
+{{ block.super }}
     <script type="text/javascript">
         $('#sort-selector').change(function() {
             var selector = $(this);
