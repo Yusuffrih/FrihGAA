@@ -6,13 +6,18 @@
         <div class="row">
             <div class="col-12">
                 <h1>Club Shop</h1>
+                {% for c in current_categories %}
+                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                        <span class="p-2 mt-2 badge badge-light border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
             </div>
         </div>
         
         <div class="row">
             <div class="col-10 offset-1 products-container">
                 <div class="row">
-
+                    
                 </div>
                 <div class="row">
                     {% for product in products %}
