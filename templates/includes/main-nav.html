@@ -25,9 +25,30 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=equipment" id="equipment-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link mr-5" href="#" id="equiment-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Equipment
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a class="dropdown-item" href="{% url 'products' %}?category=socks">Balls</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=shorts">Gloves</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=tops">Mouthguards</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=jackets">Helmets</a>
+                <a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Equipment</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mr-5" href="#" id="Membership-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Membership
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a class="dropdown-item" href="{% url 'products' %}?category=socks">Adults</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=shorts">Students</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=tops">Family</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=jackets">Child</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=jackets">Offers</a>
+                <a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Memberships</a>
+            </div>
         </li>
 
     </ul>
