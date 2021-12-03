@@ -1,8 +1,35 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
-    <div class="container-fluid">
-        <h1>Basket Page</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Basket</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if bag_items %}
+                    <div class="table-responsive rounded"></div>
+                {% else %}
+                    <p class="mb-5">Your basket is empty! <i class="fas fa-frown"></i></p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black btn-light rounded btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>Club Shop</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
     </div>
 {% endblock %}
