@@ -91,12 +91,10 @@ header {
 .navbar-brand {
     font-size: 3rem;
     color: var(--white);
-    text-decoration: underline;
 }
 
 .navbar-brand:hover {
     color: var(--maroon-web);
-    text-decoration: underline var(--maroon-web);
     transition: var(--transition);
 }
 
