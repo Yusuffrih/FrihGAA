@@ -18,7 +18,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
     fieldsets = [
-         (None,      {'fields': ['name']}),
+         (None,      {'fields': ['friendly_name','name']}),
     ]
 
 
