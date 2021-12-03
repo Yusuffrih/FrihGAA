@@ -44,7 +44,7 @@
         </div>
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a class="navbar-brand" href="{% url 'home' %}">Frih GAA</a>
+                <a class="navbar-brand" href="{% url 'home' %}">Frih GAA <i class="fas fa-baseball-ball"></i></a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
@@ -169,7 +169,7 @@
         </div>
     </footer>
 
-    {% block postload_js %}
+    {% block postloadjs %}
     {% endblock %}
 
 </body>
