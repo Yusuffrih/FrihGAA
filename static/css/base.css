@@ -295,7 +295,8 @@ a.category-badge > span.badge:hover {
 }
 
 .toast{
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
+    color: var(--rich-black-fogra);
 }
 
 .custom-toast {
