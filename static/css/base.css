@@ -280,6 +280,11 @@ a.category-badge > span.badge:hover {
     font-size: 1.3rem;
 } 
 
+.remove-item,
+.update-link {
+    cursor: pointer;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */

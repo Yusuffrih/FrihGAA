@@ -62,7 +62,7 @@
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-light rounded" 
                                                 data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                                <span class="icon">
+                                                <span>
                                                     <i class="fas fa-minus"></i>
                                                 </span>
                                             </button>
@@ -73,7 +73,7 @@
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-light rounded"
                                                 data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                                <span class="icon">
+                                                <span>
                                                     <i class="fas fa-plus"></i>
                                                 </span>
                                             </button>
@@ -84,7 +84,7 @@
 
                             <div class="col-12 text-left {% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-lg btn-light rounded mt-5">
-                                    <span class="icon">
+                                    <span>
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Club Shop</span>
