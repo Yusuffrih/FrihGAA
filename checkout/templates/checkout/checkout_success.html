@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Thank You!</h1>
+                <hr>
+                <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-7">
+
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-12 col-lg-7 text-right">
+				<a href="{% url 'memberships' %}" class="btn btn-light btn-lg rounded my-2">
+					<span class="mr-2">
+						<i class="fas fa-user-circle"></i>
+					</span>
+					<span class="text-uppercase">Buy Membership Here!</span>
+				</a>
+			</div>
+		</div>
+    </div>
+{% endblock %}
