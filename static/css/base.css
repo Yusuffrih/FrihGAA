@@ -363,6 +363,10 @@ a.category-badge > span.badge:hover {
     color: var(--white);
 }
 
+.text-maroon {
+    color: var(--maroon-web);
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
