@@ -38,6 +38,21 @@ with some adjustments to match my custome style */
     border: 1px solid #000;
 }
 
+#payment-form .form-control::placeholder,
+#card-element::placeholder {
+    color: #aab7c4 !important;
+}
+
+select,
+select option {
+  color: #000;
+}
+
+select:invalid,
+select option[value='']{
+  color: #aab7c4 !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
