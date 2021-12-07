@@ -148,12 +148,12 @@ header {
     font-size: 1.3rem;
 }
 
-.nav-item .dropdown-item {
+.dropdown-item {
     font-size: 1.6rem;
     color: var(--white);
 }
 
-.nav-item .dropdown-item:hover {
+.dropdown-item:hover {
     background-color: var(--rich-black-fogra);
     font-size: 1.6rem;
     color: var(--maroon-web);
@@ -235,7 +235,7 @@ footer {
 .allauth-form-main-content a:hover {
     color: var(--white);
     text-decoration: underline;
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     transition: var(--transition);
 }
 
