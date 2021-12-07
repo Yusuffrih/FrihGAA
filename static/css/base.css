@@ -230,6 +230,7 @@ footer {
 .allauth-form-main-content a {
     color: var(--maroon-web);
     text-decoration: none;
+    margin-bottom: 1rem;
 }
 
 .allauth-form-main-content a:hover {
@@ -244,7 +245,7 @@ footer {
 }
 
 .allauth-form-main-content input:not([type='checkbox']) {
-    width: 100%;
+    width: 80%;
 }
 
 .allauth-form-main-content button {
@@ -257,6 +258,10 @@ footer {
     background-color: var(--white);
     color: var(--maroon-web);
     transition: var(--transition);
+}
+
+.form-check-input {
+    position: relative;
 }
 
 /* ------  */
