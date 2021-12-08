@@ -18,7 +18,7 @@
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
 {{ form|crispy }}
-    <button class="btn-btn-lg" type="submit">{% trans 'Confirm' %}</button>
+    <button class="btn btn-lg" type="submit">{% trans 'Confirm' %}</button>
 </form>
 
 {% else %}
