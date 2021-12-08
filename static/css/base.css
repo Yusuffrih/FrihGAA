@@ -223,10 +223,6 @@ footer {
     margin: 2rem, 0 , 2rem;
 }
 
-.allauth-form-main-content :nth-child(2) {
-    font-size: 1.6rem;
-}
-
 .allauth-form-main-content a {
     color: var(--maroon-web);
     text-decoration: none;
@@ -248,13 +244,17 @@ footer {
     width: 80%;
 }
 
-.allauth-form-main-content button {
+.allauth-form-main-content button,
+.allauth-form-main-content input[type='submit']
+ {
     background-color: var(--maroon-web);
     color: var(--white);
     border-radius: .5rem;
+    width: fit-content;
 }
 
-.allauth-form-main-content button:hover {
+.allauth-form-main-content button:hover,
+.allauth-form-main-content input[type='submit']:hover {
     background-color: var(--white);
     color: var(--maroon-web);
     transition: var(--transition);
