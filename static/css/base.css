@@ -85,13 +85,19 @@ header {
 }
 
 .navbar-brand {
+    background-color: var(--maroon-web);
     font-size: 3rem;
     color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 1rem;
+    padding: .25rem;
 }
 
 .navbar-brand:hover {
+    background-color: var(--white);
     color: var(--maroon-web);
     transition: var(--transition);
+    border: 2px solid var(--maroon);
 }
 
 .nav-link {
@@ -99,19 +105,6 @@ header {
 }
 
 .nav-link:hover {
-    color: var(--maroon-web);
-    transition: var(--transition);
-}
-
-.navbar-dark .navbar-brand {
-    color: var(--white);
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-weight: 900;
-    font-size: 3rem;
-}
-
-.navbar-dark .navbar-brand:hover {
     color: var(--maroon-web);
     transition: var(--transition);
 }
