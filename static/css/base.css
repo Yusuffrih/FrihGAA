@@ -192,7 +192,6 @@ footer {
     display: block;
     padding: 5px;
     margin: 4px;
-    font-size: 2rem;
 }
 
 .contact li a {
@@ -460,10 +459,17 @@ a.category-badge > span.badge:hover {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 100px;
     }
-
     body {
         height: calc(100vh - 116px);
+        font-size: 1.3rem;
+    }
+    .nav-link,
+    .dropdown-item {
+        font-size: 1.3rem;
+    }
+    .dropdown-menu {
+    text-align: center;
     }
 }
