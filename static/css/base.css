@@ -55,6 +55,11 @@ h1 {
     font-size: 3rem;
 }
 
+h3,
+h2 {
+    text-transform: uppercase;
+}
+
 /* index */
 
 .club-flag {
@@ -404,6 +409,11 @@ a.category-badge > span.badge:hover {
     border: 1px solid var(--maroon-web);
 }
 
+.logo-container {
+    border-radius: 0.25rem;
+    margin: 2rem;
+}
+
 /* Product Form */
 
 .btn-file {
@@ -450,7 +460,6 @@ a.category-badge > span.badge:hover {
         left: 0;
         z-index: 1030;
     }
-
     .header-container {
         padding-top: 164px;
     }
@@ -471,5 +480,18 @@ a.category-badge > span.badge:hover {
     }
     .dropdown-menu {
     text-align: center;
+    }
+    #delivery-banner h3 {
+        font-size: 1.3rem;
+    }
+    .flag-maroon a,
+    .flag-white a {
+        width: fit-content;
+    }
+}
+@media (max-width: 425px) {
+    .flag-maroon a,
+    .flag-white a {
+        min-width: min-content;
     }
 }
