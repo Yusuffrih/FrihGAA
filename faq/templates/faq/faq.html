@@ -24,17 +24,19 @@
             <div class="row">
                 {% for f in faq %}
                     <div class="col-12 col-md-6">
+                        <!-- FAQ Card -->
                         <div class="card faq-card">
                             <div class="card-body bg-maroon">
                             <h2 class="card-title">{{ f.question }}</h2>
                             <p class="card-text">{{ f.answer }}</p>
                             {% if request.user.is_superuser %}
                                 <a href="{% url 'edit_faq' f.id %}" class="btn btn-lg edit">Edit</a>
-                                <a href="#" class="btn btn-lg delete">Delete</a>
+                                <button class="btn btn-lg delete" data-toggle="modal" data-target="#delete_Faq_{{f.id}}">Delete</button>
                             {% endif %}
                             </div>
                         </div>
                     </div>
+                    {% include 'includes/modal/delete_faq_modal.html' %}
                 {% endfor %}
             </div>
         </div>
