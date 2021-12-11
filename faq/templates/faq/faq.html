@@ -16,7 +16,7 @@
                 <h1>FAQs</h1>
                 <hr>
                 {% if request.user.is_superuser %}
-                    <a href="#" class="btn btn-lg btn-light">Add FAQ</a>
+                    <a href="{% url 'add_faq' %}" class="btn btn-lg btn-light">Add FAQ</a>
                 {% endif %}
             </div>
         </div>
