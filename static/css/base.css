@@ -437,6 +437,24 @@ a.category-badge > span.badge:hover {
     margin-top: 2rem;
 }
 
+.modal-body {
+    background-color: var(--maroon-web);
+}
+
+.modal-content {
+    border: 1px solid var(--white);
+    border-radius: 0.25rem;
+}
+
+.modal-header,
+.modal-footer {
+    background-color: var(--rich-black-fogra);
+}
+
+button.close {
+    color: var(--white);
+}
+
 /* Product Form */
 
 .btn-file {
