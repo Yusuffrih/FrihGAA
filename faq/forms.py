@@ -21,4 +21,5 @@ class FaqForm(forms.ModelForm):
             placeholder = f'{placeholders[field]} *'
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'rounded'
+            self.fields[field].widget.attrs['rows'] = '5'
             self.fields[field].label = False
