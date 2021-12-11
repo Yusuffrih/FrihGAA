@@ -414,6 +414,18 @@ a.category-badge > span.badge:hover {
     margin: 2rem;
 }
 
+/* FAQ */
+
+.faq-card {
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 0.25rem;
+    margin: 2rem;
+}
+.faq-card h2 {
+    text-transform: none;
+}
+
 /* Product Form */
 
 .btn-file {
