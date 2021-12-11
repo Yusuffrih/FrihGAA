@@ -75,3 +75,15 @@ def edit_faq(request, faq_id):
     }
 
     return render(request, template, context)
+
+
+def delete_faq(request, faq_id):
+    """ Delete an faq """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Frih GAA admin can do this.')
+        return redirect(reverse('faq'))
+
+    faq = get_object_or_404(Faq, pk=faq_id)
+    faq.delete()
+    messages.success(request, 'You successfully deleted the FAQ!')
+    return redirect(reverse('faq'))
