@@ -20,21 +20,23 @@
                 {% endif %}
             </div>
         </div>
-        <div class="row">
-            {% for f in faq %}
-                <div class="col-12 col-md-6">
-                    <div class="card faq-card">
-                        <div class="card-body bg-maroon">
-                        <h2 class="card-title">{{ f.question }}</h2>
-                        <p class="card-text">{{ f.answer }}</p>
-                        {% if request.user.is_superuser %}
-                            <a href="#" class="btn btn-lg edit">Edit</a>
-                            <a href="#" class="btn btn-lg delete">Delete</a>
-                        {% endif %}
+        <div class="faq-container">
+            <div class="row">
+                {% for f in faq %}
+                    <div class="col-12 col-md-6">
+                        <div class="card faq-card">
+                            <div class="card-body bg-maroon">
+                            <h2 class="card-title">{{ f.question }}</h2>
+                            <p class="card-text">{{ f.answer }}</p>
+                            {% if request.user.is_superuser %}
+                                <a href="#" class="btn btn-lg edit">Edit</a>
+                                <a href="#" class="btn btn-lg delete">Delete</a>
+                            {% endif %}
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}
