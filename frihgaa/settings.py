@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'membership',
     'product',
     'faq',
+    'contact',
 
     # other
     'storages',
