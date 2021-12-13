@@ -438,16 +438,19 @@ a.category-badge > span.badge:hover {
 
 .modal-body {
     background-color: var(--maroon-web);
+    color: var(--white);
 }
 
 .modal-content {
     border: 1px solid var(--white);
     border-radius: 0.25rem;
+    color: var(--white);
 }
 
 .modal-header,
 .modal-footer {
     background-color: var(--rich-black-fogra);
+    color: var(--white);
 }
 
 button.close {
@@ -510,7 +513,7 @@ button.close {
     padding: 1rem;
     border-radius: 0.5rem;
   }
-  
+
   #myBtn:hover {
     background-color: var(--white);
     border: 1px solid var(--maroon-web);
