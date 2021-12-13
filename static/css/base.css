@@ -512,13 +512,17 @@ button.close {
     cursor: pointer;
     padding: 1rem;
     border-radius: 0.5rem;
-  }
+}
 
-  #myBtn:hover {
-    background-color: var(--white);
-    border: 1px solid var(--maroon-web);
-    color: var(--rich-black-fogra);
-  }
+#myBtn:hover {
+background-color: var(--white);
+border: 1px solid var(--maroon-web);
+color: var(--rich-black-fogra);
+}
+
+#home-link {
+    font-weight: bold;
+}
 
 /* Media Queries */
 
@@ -555,9 +559,6 @@ button.close {
     .nav-link,
     .dropdown-item {
         font-size: 1.3rem;
-    }
-    .dropdown-menu {
-    text-align: center;
     }
     #delivery-banner h3 {
         font-size: 1.3rem;
