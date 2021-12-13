@@ -1,0 +1,14 @@
+Hi {{ instance.name }},
+
+Thanks for contacting Frih GAA. Your message bellow has been recieved.
+
+{{ instance.subject }}
+
+{{ instance.content }}
+
+We will endevour to respond to your query as soon as possible, but please allow 5 days.
+
+Kind regards,
+
+Frih GAA
+
