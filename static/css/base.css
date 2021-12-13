@@ -36,7 +36,6 @@ body {
     border-radius: var(--border-radius);
     min-width: 15rem;
     margin: 0 auto;
-    margin-top: 15rem;
 }
 
 .white-btn {
@@ -482,6 +481,41 @@ button.close {
     border-color: #dc3545;
     border-radius: 0.25rem;
 }
+
+.action {
+    background-color: #0b090950;
+    width: fit-content;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+    top: 20%;
+    left: 15%;
+    margin: 2rem;
+}
+
+/* W3 Schools Back to top button */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    z-index: 99;
+    font-size: 2rem;
+    border: 1px solid var(--white);
+    outline: none;
+    background-color: var(--maroon-web);
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  #myBtn:hover {
+    background-color: var(--white);
+    border: 1px solid var(--maroon-web);
+    color: var(--rich-black-fogra);
+  }
 
 /* Media Queries */
 
