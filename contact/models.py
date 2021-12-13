@@ -4,7 +4,10 @@ from django.db import models
 
 
 class Contact(models.Model):
-    verbose_name = 'Contact'
+    
+    
+    class Meta:
+        verbose_name = 'Contact'
 
     name = models.CharField(
         max_length=50,
@@ -28,4 +31,4 @@ class Contact(models.Model):
         )
 
     def __str__(self):
-        self.name
+        return self.name
