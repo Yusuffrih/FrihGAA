@@ -39,6 +39,9 @@ I was satisfied with the look and feel of the site across **all** devices that I
 
 The navbar links all work perfectly and all have the same hover and click state. When the navbar dropdown menu is displayed, all the links in this all work perfectly as well and all have the same font size, hover and click state as well. The user is able to navigate to all areas of the site. In particular, the user is able to navigate to the basket from the navbar and is also able to see the grand total cost of what they have placed into their basket which should make for a positive User Experience. 
 
+Conclusion:
+The site's navbar works as expected and is responsive on all screens as noted above. All the links look well and behave in the desired manner. All aspects of the site are navigable from the navbar which allows the user to quickly and easily find their way from feature to feature and this provides them with a positive user experience.
+
 User story satisified: 
 * Site navigation to be easy and very intuitive
 * be able to view the items in my basket from anywhere in the site
@@ -57,6 +60,9 @@ There are various steps to users registering to the site:
 4) An email is then sent to the user's given email address with a link to follow which will verify their email address when clicked. Once the user verifies their email, they will be automatically signed in and redirected to the homepage where they would have started out. 
 ![allauth confirmation email page](testing/feature_testing/confirm-email.png)
 
+Conclusion:
+The user authentication on the site works exactly as it's supposed to with a user being able to easily navigate to where they can login or sign up. Once they sign up, they are then sent an email with a link to follow in order to cofirm their own email address provided is actually theirs. This then completes the user authentication process and the user is automatically signed in. Read the profile testing to see how the user can update their details. If the user wants to delete their profile entirely, they can easily contact the site owners through the contact form and ask for this to be done.
+
 User story satisified: 
 * To be able to log in and out easily
 * To be able to recover my password if I no longer remember it
@@ -64,21 +70,37 @@ User story satisified:
 
 ### Club Shop
 #### Display Products
-
-As this feature suggests, this page is used to display all the products for sale on this site. The users can come here to view any products. When the site owner adds a product via the admin site or in the product management page, it will come up here on this page. The products are all displaying correctly on this page in the desired format with the desired details attached to them such as product categories, prices, names, images. Also, on each product, if the user signed in is a site owner, they will see the edit and delete buttons on each product. The edit button takes the user to the edit product form as seen below.
-![]()
-
 ![all products display page](testing/feature_testing/products-page.png)
+As this feature suggests, this page is used to display all the products for sale on this site. The users can come here to view any products. When the site owner adds a product via the admin site or in the product management page, it will come up here on this page. The products are all displaying correctly on this page in the desired format with the desired details attached to them such as product categories, prices, names, images. When a product does not have an image attached to it, the product will have a placeholder image instead that signifies that there is no image attached to that product. 
+
+Also, on each product, if the user signed in is a site owner, they will see the edit and delete buttons on each product. The edit button takes the user to the edit product form as seen below.
+![edit product page](testing/feature_testing/edit-product.png)
+
+When the site owner goes to delete the specific product that they want to delete, they are given a warning to make sure that they want to delete the item from the database. This warning is in the form of a modal and is when they click on the delete button again, only then is the product deleted.
+
+conclusion:
+To conclude this piece of testing, all the products are displaying in the products page exactly as they are supposed to be displaying, with all the details that are needed to make this a rich and enticing page for the user to have a positive experience while on the site.
 
 User story satisfied:
 * be able to view all the products available to purchase
+* To be able to add, edit and delete delete products to and from the database
 
 #### Search bar
+
+The search bar that is positioned in the `base template` is available to the users across the entire site meaning that at any point, the user can type in a product's name or in the product description. Through testing this, from all pages on the site, the conclusion is that this feature is fully functional works as expexted.
+
+Once the user has searched for a item through the search bar, it renders the products page with the relevant criteria being searched for. The number of products returned and the search criteria is also noted at the top of the list of items returned.
+![search bar screenshot](testing/feature_testing/searchbar.png)
+
+conclusion:
+The conclusion from this piece of testing is that the search bar allows the user to search for products using the key words that target the name and description fields of the products.
 
 User story satisfied:
 * be able to search the site for products using keywords in the search bar
 
 #### Sort Products
+
+
 
 User story satisfied:
 * be able to sort products by Category/Price/Name
