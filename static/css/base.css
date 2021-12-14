@@ -408,9 +408,11 @@ a.category-badge > span.badge:hover {
     border: 1px solid var(--maroon-web);
 }
 
-.logo-container {
-    border-radius: 0.25rem;
-    margin: 2rem;
+.logo-container img {
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+    height: 100%;
+    width: 100%;
 }
 
 /* FAQ */
@@ -492,7 +494,6 @@ button.close {
     padding: 1rem;
     position: relative;
     top: 20%;
-    left: 15%;
     margin: 2rem;
 }
 
@@ -568,6 +569,7 @@ color: var(--rich-black-fogra);
         width: fit-content;
     }
 }
+
 @media (max-width: 425px) {
     .flag-maroon a,
     .flag-white a {
