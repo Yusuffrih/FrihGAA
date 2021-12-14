@@ -248,7 +248,7 @@ footer {
 /* allauth-form-main-content */
 
 .allauth-form-main-content {
-    margin: 2rem, 0, 2rem;
+    margin: 2rem, 0, 2rem, 0;
 }
 
 .allauth-form-main-content a {
