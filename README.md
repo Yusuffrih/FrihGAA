@@ -234,6 +234,7 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 * W3 CSS Validation
 * AWS
 * SQLite3
+* Auto Prefixer
 
 ## Testing
 Testing carried out on the site can be found [here](TESTING.md) in a separate file
