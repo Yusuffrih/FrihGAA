@@ -1,9 +1,9 @@
 <!--Delete Product Modal -->
-<div class="modal fade" id="delete_product_detail_{{product.id}}" tabindex="-1" aria-labelledby="deleteProductDetailModal" aria-hidden="true">
+<div class="modal fade" id="delete_product_detail_{{product.id}}" tabindex="-1" aria-labelledby="deleteProductDetailModal{{product.id}}" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title font-weight-bold" id="deleteProductDetailModal">Confirm Deletion</h4>
+                <h4 class="modal-title font-weight-bold" id="deleteProductDetailModal{{product.id}}">Confirm Deletion</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
