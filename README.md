@@ -43,11 +43,9 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
 **As the site owner, I would like:**
 * Access the admin section of the site
 * To Create, Read, Update and Delete items in the database from a centralised location through the admin app
-* Club members to be able to easily purchase Membership via the site
+* Club members to be able to easily contact the club via the site's contact form
 * To sell club merchandise through the site
-* Customers to be able to rate and review the merchandise so I know the popular items
 * Give the club a professional look and feel to attract new members
-* To provide information to club members and the public about matches the club will be involved in
 
 ### User Stories
 **As a user, I want to:**  
@@ -57,21 +55,20 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
 * be able to recover my password if I no longer remember it
 * receive confirmation emails throughout the registration process
 * be able to view my profile details and past orders
-* be able to view all the products and memberships available to purchase
-* be able to sort products by Category/Price/Rating
-* be able to see a more detailed page about a particular product or membership
-* be able to easily add products to my bag
-* be able to view the items in my bag from anywhere in the site
-* be able to adjust the quantity of products or memberships in my bag
-* be able to checkout from the bag page
-* be able to see all products from a specific category
-* be able to easily enter my payment details
+* be able to view all the products available to purchase
+* be able to sort products by Category/Price/Name
+* be able to see a more detailed page about a particular product
+* be able to easily add products to my basket
+* be able to view the items in my basket from anywhere in the site
+* be able to adjust the quantity of products in the basket, from the basket
+* be able to checkout from the basket page
+* be able to easily enter my payment details and make payments
 * be able to hava my delivery and payment details autofill in checkout once I have a profile
-* recieve an order confirmation directly after checkout
-* be able to review a product and leave a rating
-* be able to Edit a review or rating
-* be able to Delete a review or rating
+* recieve an order confirmation email directly after checkout
 * be able to search the site for products or membership types using keywords in the search bar
+* be able to contact the site owners easily through a contact form on the site
+* receive an acknowledgement email to let me know my contact form has been submitted
+* be able to view a list of FAQs on the site to find out more information about the club
 
 ### User Requirements
 
@@ -98,7 +95,6 @@ I created mock ups for my page to fit into the main device types - Desktop, Tabl
 * [Tablet]()
 * [Desktop]()
 
-
 ### Data Schema
 Django is compatible with SQL databases by default and so I used SQLite in development and then used a PostgresQL database in the deployed site which is provided by [Heroku](https://id.heroku.com/login). 
 
@@ -112,7 +108,6 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 | Name | Database Key | Field Type | Type Validation |
 | :-------------: |:----------------:| :--------------: | :---------: |
 |User | user |	OneToOneField 'User'| on_delete=models.CASCADE
-|Membership | membership |	BooleanField | default=False, null=True, blank=True
 |Default Phone Number |	default_phone_number | CharField | max_length=20, null=True, blank=True
 |Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
 |Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
@@ -134,35 +129,28 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 | :-------------: |:----------------:| :--------------: | :---------: |
 |Product id | id | primary_key=True | AutoField
 |Name | name | default='', max_length=254 | CharField
-|SKU | sku | max_length=254, null=True, blank=True | CharField
 |Description | content | blank=False | TextField
 |Has Sizes | has_sizes | BooleanField | default=False, null=True, blank=True
 |Price | price | max_digits=6, decimal_places=2 | DecimalField
 |Image| image| blank=False | ImageField
 |Rating | rating | blank=True | DecimalField
 
-### Membership App
-**Membership model**
-| Name | Database Key | Validation | Field Type|
-| :-------------: |:----------------:| :--------------: | :---------: |
-|Membership id | id | primary_key=True | AutoField
-|Name | name | default='', max_length=254 | CharField
-|SKU | sku | max_length=254, null=True, blank=True | CharField
-|Description | content | blank=False | TextField
-|Has Sizes | has_sizes | BooleanField | default=False, null=True, blank=True
-|Price | price | max_digits=6, decimal_places=2 | DecimalField
-|Image| image| blank=False | ImageField
 
+**FAQ Model**
+| Name     | Database Key | Field Type | Type Validation                              |
+|----------|--------------|------------|----------------------------------------------|
+|FAQ id | id | primary_key=True | AutoField
+| Question | question     | TextField  | max_length= 300 , null= False , blank= False |
+| Answer   | answer       | TextField  | max_length= 900 , null= False , blank= False |
 
-
-**Category model**
-
-| Name | Database Key | Field Type | Type Validation |
-| :-------------: |:----------------:| :--------------: | :---------: |
-|Name | name | CharField | max_length=254
-|Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=True
-
-
+**Contact Model**
+| Name    | Database Key | Field Type | Type Validation                          |
+|---------|--------------|------------|------------------------------------------|
+|Contact id | id | primary_key=True | AutoField
+| Name    | name         | CharField  | max_length=50, null=False, blank=False   |
+| Email   | email        | EmailField | max_length=50, null=False, blank=False   |
+| Subject | subject      | CharField  | max_length=254, null=False, blank=False  |
+| Content | content      | TextField  | max_length=3000, null=False, blank=False |
 
 ## Features
 
