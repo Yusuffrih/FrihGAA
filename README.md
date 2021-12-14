@@ -195,8 +195,8 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 * Search bar functionality, giving the users the ability to search the site for products by name or category
 * 'Sort by' feature giving the users the ability to sort the products list by price, size, category, and other criteria
 * Online payments feature made available via Stripe
-* Different sections on the matches page for each of the different age groups in the club so that users can search the matches for the team that is of interest to them
 * A contact form for site users to contact the club administrator and provide feedback, suggest improvements or just ake queries
+* FAQ page giving the user the ability to quickly look for commonly asked questions about the club
 
 
 ### Features Yet To Implement
