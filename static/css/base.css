@@ -398,12 +398,16 @@ a.category-badge > span.badge:hover {
 .faq-card {
     background-color: var(--white);
     border: 1px solid var(--white);
-    border-radius: 0.25rem;
     margin: 2rem;
+}
+
+.faq-card .card-body {
+    border-radius: 0.25rem;
 }
 
 .faq-card .card-body:hover {
     background-color: var(--rich-black-fogra);
+    border: 2px solid var(--maroon-web);
 }
 
 .faq-card h2 {
