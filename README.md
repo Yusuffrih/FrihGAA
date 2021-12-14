@@ -1,4 +1,5 @@
-xt# FrihGAA
+FrihGAA
+
 ![Am I responsive image to go here]()
 
 FrihGAA is my final project for the Code Institute's Professional Diploma. It is a Web Application for a fictional GAA club that satisfies the requirements of this assessment. The brief provided for this project in the Assessment handbook was to 
@@ -82,8 +83,40 @@ For the fonts on the site, I used [Google Fonts](https://fonts.google.com/?stand
 I used [Coolors](https://coolors.co/) to assist in generating a colour scheme for the site. This is a great site as it gives you the codes of the colours you want in any form you want ie. Hex codes for my site. 
 The colour scheme I have chosen for the site is Black(#0B0909), White (#FFFFFF) and Maroon (#800000). The reasons for this choice is that they are the same colours as my own GAA club.
 
+![Coolors](media/readme/ci-ms4-frihgaa-coolors.png)
+
 ### Icons 
 I have gone to [Font Awesome](https://fontawesome.com/) for the icons that I have used in the site. The icons, I feel just add a little bit extra to the site in terms of style and make it a bit more visually appealing which ultimately provides a better User Experience.
+
+### Structure
+
+#### Base
+The base template is used to give the overall site the same look and feel. It holds elements that are displayed across the entire site i.e. navbar, footer, social media links the club logo and the site brand.
+
+#### Home / Landing
+The landing page aims to be attractive to the user and let them know exactly what the site is at a glance. The user shouldn't have to look very far to be gently nudged to go to the products page where they can buy club merchandise.
+
+#### Products
+The products will be displayed on this page. There will be options for the user to navigate to specific categories of products in the navbar or even sort by price or category. There is some basic information displayed on each product i.e. name, price, category,and an image. The products are displayed in a grid view which changes in structure depending on the screen size. More detailed product information can be viewed when the user clicks into the product. As this page will require the user to scroll down a lot to see different products, there is also a back to top button placed in the bottom right-hand corner of the screen once the user begins scrolling.
+
+If the user is a site owner, they will be able to see edit and delete buttons attached to each product. If the user clicks on the edit button, they will be taken to the edit product form where they make amendments to aspects of the product.
+
+If the user is a site owner and they want to be able to add a product, there is a link in the account link in the navbar to the product management page. They will be able to add products here. This form is very similar to the edit product form. 
+
+#### Product Details
+Once the user clicks into a specific product that they like, they will be taken to a the product's detail page where they can read a little bit about that product, what category it belongs to, add a chosen quantity or size (if relevant) to the basket, and view a larger version of the product image.
+
+#### Basket
+The basket can be accessed from anywhere in the site from the navbar. The basket total will also be displayed in the navbar underneath the basket icon. Once a user clicks the 'add to basket' `button`, a `toast` will be displayed on the page giving the user an oversite of the basket and what the total is. There is also a 'proceed to checkout' `button` on the toast which will allow the user to easily access the basket and subsequently, the checkout page. On the basket page, each item that the user has added will be displayed on it's own line which will give the user various details about that item i.e. what quantity and size has been selected and a subtotal price. There is also a total cost and if the user has not spent enough to gain free delivery, how much they need to avail of this. Form here the user can edit their basket easily usin the buttons on each lineitem. Once, the user is satisfied with their basket, they can proceed to checkout.     
+
+#### Checkout
+The checkout page consists of two columns. On the left is the form for the user to enter their delivery details and card information and click the submit button to confirm payment. In the column on the right, the user gets a last chance to view their order summary information.  
+
+#### Contact
+The contact page can be accessed through the link in the navbar. This page is quite simply a form, positioned on the left side of the screen on larger screens and centered on smaller ones. This form allows the user to submit a query to the site owners. They can attached their name and email to this form as well to allow the site owner to respond. 
+
+#### FAQ
+The FAQ page will allow the user to view a list of frequently asked questions about the club. This allows the user to find out some more about the club i.e. who to contact to buy sign up to the club and purchase membership. If the user is a superuser, there are buttons attached to each FAQ to allow the site owner to edit or delete the item. At the top of the page there is an 'Add FAQ' button where the user can of course add an FAQ if they feel the need. The Add and Edit buttons will take the user to similar forms where they can input the relevant information.
 
 ### Wireframes
 When creating my wireframes, I first drew some rough sketches on paper but then decided that [Balsamiq](https://balsamiq.com/) would be the most suitable technology to use to assist with the design of the site.
@@ -158,21 +191,22 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 * User Authentication using Allauth. This allows login, logout, email verifation and other features.
 * The club shop, givin the users the ability to browse and purchase club merchandise
 * Product categorisation giving the users the ability to quickly search for certain types of products they are looking for 
-* Membership area of the site, giving the users the ability to browse and purchase different membership types
-* For each product and membership, there is a product or membership details page which outlines the details of that particular product or membership
-* Search bar functionality, giving the users the ability to search the site for products & memberships by name or category
+* For each product, there is a product details page which outlines the details of that particular product or membership
+* Search bar functionality, giving the users the ability to search the site for products by name or category
 * 'Sort by' feature giving the users the ability to sort the products list by price, size, category, and other criteria
 * Online payments feature made available via Stripe
-* Matches page on the site that allows the users to keep up to date with the club's match activity
 * Different sections on the matches page for each of the different age groups in the club so that users can search the matches for the team that is of interest to them
-* Gallery of pictures of the club's facilities to entice non-member site users to join the club
 * A contact form for site users to contact the club administrator and provide feedback, suggest improvements or just ake queries
 
 
 ### Features Yet To Implement
 * Club news page where members can keep up to date with the different club activities such as fundraisers
 * Club gym booking form to be able to book a slot that you can use the gym facility
+* Matches site where the user can keep up to date with what matches the club is involved in
+* Memberships section on the site to allow people to purchase their memberships for the year
+* Gallery of pictures of the club's facilities to entice non-member site users to join the club
 
+*I did not have time to implement all the features I would have liked.*
 
 ## Technologies Used
 
@@ -202,20 +236,7 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 * SQLite3
 
 ## Testing
-
-### User Story Testing
-
-### Validator Testing 
-#### HTML Validator
-#### CSS Validator
-
-### Feature Testing
-
-### Lighthouse Testing
-
-### Compatability Testing
-
-### Bugs
+Testing carried out on the site can be found [here](TESTING.md) in a separate file
 
 ## Deployment
 
