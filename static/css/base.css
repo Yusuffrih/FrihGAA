@@ -95,6 +95,7 @@ header {
     border: 2px solid var(--white);
     border-radius: 1rem;
     padding: .25rem;
+    margin-top: 1rem;
 }
 
 .navbar-brand:hover {
