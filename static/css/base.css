@@ -30,16 +30,18 @@ body {
 
 /* Buttons */
 
-.white-btn,
-.maroon-btn {
+.white-btn {
+    background-color: var(--white);
     border: 1px solid var(--rich-black-fogra);
     border-radius: var(--border-radius);
-    min-width: 15rem;
+    min-width: 10rem;
     margin: 0 auto;
 }
 
-.white-btn {
-    background-color: var(--white);
+.white-btn:hover{
+    background-color: var(--maroon-web);
+    color: var(--white);
+    border: 1px solid var(--white);
 }
 
 .maroon-btn {
@@ -371,12 +373,6 @@ a.category-badge > span.badge:hover {
 
 .text-maroon {
     color: var(--maroon-web);
-}
-
-.text-maroon:active,
-.text-maroon:hover,
-.text-maroon:focus {
-    color: var(--rich-black-fogra);
 }
 
 .edit {
