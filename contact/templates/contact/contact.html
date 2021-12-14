@@ -12,7 +12,7 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6 offset-lg-3">
                 <hr>
                 <h1 class="mb-4">Contact Us</h1>
                 <hr>
@@ -20,13 +20,13 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6 offset-lg-3">
                 <form method="POST" action="{% url 'contact' %}" class="form mb-2">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <div class="text-right mb-4">
+                    <div class="text-right mt-5 mb-5 text-center">
                         <a class="btn btn-light btn-lg" href="{% url 'home' %}">Cancel</a>
-                        <button class="btn btn-lg bg-maroon" type="submit">Send</button>
+                        <button class="btn btn-lg bg-maroon ml-5" type="submit">Send</button>
                     </div>
                 </form>
             </div>            
