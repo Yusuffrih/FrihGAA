@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col">
                 {% if basket_items %}
-                    <div class="table-responsive rounded">
+                    <div class="table-responsive">
                         <table class="table table-sm table-borderless text-light">
                             <thead>
                                 <tr>
@@ -37,9 +37,9 @@
                                 <tr>
                                     <td class="p-3 w-25">
                                         {% if item.product.image %}
-                                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                            <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                         {% else %}
-                                            <img class="img-fluid rounded" src="{{ MEDIA_URL}}no-image.png" alt="{{ item.product.name }}">
+                                            <img class="img-fluid " src="{{ MEDIA_URL}}no-image.png" alt="{{ item.product.name }}">
                                         {% endif%}
                                     </td>
                                     <td class="py-3">
@@ -55,7 +55,7 @@
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-light rounded" 
+                                                        <button class="decrement-qty btn btn-light " 
                                                             data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-minus"></i>
@@ -67,7 +67,7 @@
                                                         data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-light rounded"
+                                                        <button class="increment-qty btn btn-light "
                                                             data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-plus"></i>
@@ -102,13 +102,13 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-light rounded btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-light btn-lg">
                                         <span>
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Club Shop</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-light rounded btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-light btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span>
                                             <i class="fas fa-lock"></i>
@@ -120,7 +120,7 @@
                     </div>
                 {% else %}
                     <p class="mb-5">Your basket is empty! <i class="fas fa-frown"></i></p>
-                    <a href="{% url 'products' %}" class="btn btn-light rounded btn-lg">
+                    <a href="{% url 'products' %}" class="btn btn-light btn-lg">
                         <span>
                             <i class="fas fa-chevron-left"></i>
                         </span>Club Shop</span>

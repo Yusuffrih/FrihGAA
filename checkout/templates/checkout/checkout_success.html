@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-7">
-                <div class="order-confirmation-wrapper p-2 border rounded">
+                <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
                             <small class="text-uppercase text-maroon">Order Info:</small>
@@ -194,14 +194,14 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                <a href="{% url 'profile' %}" class="btn btn-light btn-lg rounded my-2">
+                <a href="{% url 'profile' %}" class="btn btn-light btn-lg my-2">
                         <span class="mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Back To Profile</span>
                     </a>
                 {% else %}
-                    <a href="{% url 'products' %}" class="btn btn-light btn-lg rounded my-2">
+                    <a href="{% url 'products' %}" class="btn btn-light btn-lg my-2">
                         <span class="mr-2">
                             <i class="fas fa-chevron-left"></i>
                         </span>

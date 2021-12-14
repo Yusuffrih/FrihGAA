@@ -1,4 +1,4 @@
-<div class="toast custom-toast rounded border-top-0" data-autohide="false">
+<div class="toast custom-toast border-top-0" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white">
@@ -41,11 +41,11 @@
                         <span class="float-right">${{ total|floatformat:2 }}</span>
                     </p></strong>
                     {% if free_delivery_delta > 0 %}
-                        <p class="mb-1 p-2 bg-maroon rounded shadow-sm text-center">
+                        <p class="mb-1 p-2 bg-maroon shadow-sm text-center">
                             Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_basket' %}" class="btn btn-dark btn-block rounded">
+                    <a href="{% url 'view_basket' %}" class="btn btn-dark btn-block">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span>
                             <i class="fas fa-lock"></i>
