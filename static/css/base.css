@@ -578,7 +578,7 @@ color: var(--rich-black-fogra);
 .solid-bg-maroon {
     background-color: var(--maroon-web);
     color: var(--white);
-}
+}   
 
 /* Media Queries */
 
@@ -633,5 +633,11 @@ color: var(--rich-black-fogra);
         min-width: -webkit-min-content;
         min-width: -moz-min-content;
         min-width: min-content;
+    }
+}
+
+@media (max-width: 272px) {
+    .header-container {
+        padding-top: 160px;
     }
 }
