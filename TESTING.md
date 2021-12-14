@@ -26,30 +26,108 @@ I was satisfied with the look and feel of the site across **all** devices that I
 * Ipad Pro
 * Surface Duo
 
-## User Story Testing
-* the site navigation to be easy and very intuitive
-The site navbar
-* be able to register a profile on the site with all my details
-* be able to log in and out easily
-* be able to recover my password if I no longer remember it
-* receive confirmation emails throughout the registration process
-* be able to view my profile details and past orders
+## User Story & Feature Testing
+### Navbar
+![navbar screenshot](testing/feature_testing/navbar.png)
+<hr>
+
+![navbar screenshot](testing/feature_testing/navbar-dropdown-menu.png)
+<hr>
+
+![navbar screenshot](testing/feature_testing/navbar-responsive-dropdown.png)
+<hr>
+
+The navbar links all work perfectly and all have the same hover and click state. When the navbar dropdown menu is displayed, all the links in this all work perfectly as well and all have the same font size, hover and click state as well. The user is able to navigate to all areas of the site. In particular, the user is able to navigate to the basket from the navbar and is also able to see the grand total cost of what they have placed into their basket which should make for a positive User Experience. 
+
+User story satisified: 
+* Site navigation to be easy and very intuitive
+* be able to view the items in my basket from anywhere in the site
+
+### User Authentication - Allauth
+
+There are various steps to users registering to the site:
+1) The clicks the account icon in the navbar. They will see that they can either login or register.
+![allauth account icon in navbar](testing/feature_testing/registration.png)
+
+2) When they click to register, the will be directed to the registration page where they will be prompted to input their details including username, email address and password.
+![allauth signup page](testing/feature_testing/sign-up.png)
+3) The user will then be directed to a page with a message to let them know that they need to verify their email address.
+![allauth email verification page](testing/feature_testing/email-verification.png)
+
+4) An email is then sent to the user's given email address with a link to follow which will verify their email address when clicked. Once the user verifies their email, they will be automatically signed in and redirected to the homepage where they would have started out. 
+![allauth confirmation email page](testing/feature_testing/confirm-email.png)
+
+User story satisified: 
+* To be able to log in and out easily
+* To be able to recover my password if I no longer remember it
+* to receive confirmation emails throughout the registration process
+
+### Club Shop
+#### Display Products
+
+As this feature suggests, this page is used to display all the products for sale on this site. The users can come here to view any products. When the site owner adds a product via the admin site or in the product management page, it will come up here on this page. The products are all displaying correctly on this page in the desired format with the desired details attached to them such as product categories, prices, names, images. Also, on each product, if the user signed in is a site owner, they will see the edit and delete buttons on each product. The edit button takes the user to the edit product form as seen below.
+![]()
+
+![all products display page](testing/feature_testing/products-page.png)
+
+User story satisfied:
 * be able to view all the products available to purchase
+
+#### Search bar
+
+User story satisfied:
+* be able to search the site for products using keywords in the search bar
+
+#### Sort Products
+
+User story satisfied:
 * be able to sort products by Category/Price/Name
+
+### Product Details
+
+User story satisfied:
 * be able to see a more detailed page about a particular product
 * be able to easily add products to my basket
+
+### Shopping Basket
+
+User story satisfied:
 * be able to view the items in my basket from anywhere in the site
 * be able to adjust the quantity of products in the basket, from the basket
 * be able to checkout from the basket page
+
+
+### Online Payments & Checkout
+
+User story satisfied:
 * be able to easily enter my payment details and make payments
 * be able to hava my delivery and payment details autofill in checkout once I have a profile
 * recieve an order confirmation email directly after checkout
-* be able to search the site for products or membership types using keywords in the search bar
+
+
+### Profile
+
+User story satisfied:
+* To be able to register a profile on the site with all my details
+* To be able to view my profile details and past orders
+
+### Contact Form
+
+User story satisfied:
 * be able to contact the site owners easily through a contact form on the site
 * receive an acknowledgement email to let me know my contact form has been submitted
-* be able to view a list of FAQs on the site to find out more information about the club
 
-## Feature Testing
+
+### FAQs
+
+User story satisfied:
+* Be able to view a list of FAQs on the site to find out more information about the club
+
+### Footer
+
+User story satisfied:
+* Be a able to view some basic details about the site owners in the site footer
+* Be able to navigate to the site owners social media pages from links in the footer to be able to discover more about the club
 
 
 ## Bugs
