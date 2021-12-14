@@ -71,8 +71,8 @@
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                         <small class="ml-4">
-                                            <a class="edit" href="{% url 'edit_product' product.id %}">Edit</a>
-                                            <button class="btn btn-lg delete" data-toggle="modal" data-target="#delete_product_{{product.id}}">Delete</button>
+                                            <a class="btn btn-sm btn-outline-secondary" href="{% url 'edit_product' product.id %}">Edit</a>
+                                            <button class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete_product_{{product.id}}">Delete</button>
                                         </small>
                                     {% endif %}
                                     {% include 'products/includes/delete_modals/delete_product_modal.html' %}

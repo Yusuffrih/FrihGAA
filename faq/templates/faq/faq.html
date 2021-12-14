@@ -30,8 +30,8 @@
                             <h2 class="card-title">{{ f.question }}</h2>
                             <p class="card-text">{{ f.answer }}</p>
                             {% if request.user.is_superuser %}
-                                <a href="{% url 'edit_faq' f.id %}" class="btn btn-lg edit">Edit</a>
-                                <button class="btn btn-lg delete" data-toggle="modal" data-target="#delete_Faq_{{f.id}}">Delete</button>
+                                <a href="{% url 'edit_faq' f.id %}" class="btn btn-outline-secondary">Edit</a>
+                                <button class="btn btn-outline-danger" data-toggle="modal" data-target="#delete_Faq_{{f.id}}">Delete</button>
                             {% endif %}
                             </div>
                         </div>

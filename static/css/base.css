@@ -391,7 +391,7 @@ a.category-badge > span.badge:hover {
 .delete:active,
 .delete:hover,
 .delete:focus {
-    color: var(--maroon-web);
+    background-color: var(--rich-black-fogra);
 }
 
 .products-container {
