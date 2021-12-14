@@ -484,6 +484,7 @@ a.category-badge > span.badge:hover {
     background-color: var(--white);
     border-radius: 0.25rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .modal-body {
