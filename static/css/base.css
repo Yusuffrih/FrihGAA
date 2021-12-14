@@ -49,6 +49,20 @@ body {
     color: var(--white);
 }
 
+.bg-maroon:hover,
+.bg-maroon:active,
+.bg-maroon:focus {
+    background-color: var(--edit-grey);
+    color: var(--maroon-web);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    background-color: var(--edit-grey);
+    color: var(--maroon-web);
+}
+
 /* headings */
 
 h1 {
@@ -171,6 +185,16 @@ header {
     color: var(--white);
 }
 
+.contact li a:hover,
+.contact li a:focus,
+.contact li a:active,
+.social-media li a:hover,
+.social-media li a:focus,
+.social-media li a:active {
+    color: var(--maroon-web);
+    cursor: pointer;
+}
+
 .social-media li a i {
     font-size: 2.5rem;
 }
@@ -186,8 +210,17 @@ footer {
 
 .address-line {
     display: block;
-    color: #FFFFFF;
+    color: var(--white);
 }
+
+.address-line:hover,
+.address-line:focus,
+.address-line:active
+{
+    color: var(--maroon-web);
+}
+
+
 
 .contact {
     list-style: none;
@@ -505,6 +538,11 @@ color: var(--rich-black-fogra);
 
 #home-link {
     font-weight: bold;
+}
+
+.solid-bg-maroon {
+    background-color: var(--maroon-web);
+    color: var(--white);
 }
 
 /* Media Queries */
