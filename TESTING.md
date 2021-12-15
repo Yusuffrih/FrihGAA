@@ -149,6 +149,15 @@ Once the user adds an item to the basket, the basket preview will pop up in a to
 
 If the product has an image, it will be displayed in the space to left of the product as seen above, however, if there is no product image, a placeholder will be there in it's place. The user can click into the product image which will open it in another tab a little bigger.
 
+If the user is a superuser, they will also see the edit and delete buttons that are available on each of the product cards on the products page. If the user clicks the edit button, they will be redirected to the edit product form. The product details will be pre-populated in the form and the image that is currently in the database for that product is displayed in a thumbnail sized version. The user can then edit the details of the product and update click the update button to confirm the changes.
+
+![edit product](testing/feature_testing/edit-product.png)
+
+If the user clicks the delete button on the other hand, the delete product modal will come up on the page and make the superuser double check about whether they want to delete the product and if that is the correct product they want to delete.
+
+![delete product modal](testing/feature_testing/delete-product.png)
+
+
 Conclusion:
 
 This feature of the site is functioning as expected with everything working perfectly and all the functionality in order. The below user stories are being satisfied as outlined above.
@@ -272,7 +281,11 @@ User story satisfied:
 Functionality:
 The user navigates to the FAQ page via the 'Other' link in the navbar. When they arrive, they will see a list of FAQs displayed in individual cards very attractively in maroon boxes that turn black when the cursor hovering over them. 
 
-If the user is a superuser, they will see the two buttons attached to each of the FAQ cards. One is an edit button and the other is a delete button. Once the delete button is pressed, a modal will pop up ontop of anything else on the screen and ask if they are sure that they want to delete the FAQ. If the user clicks the edit button, they are redirected to the Edit FAQ page seen in the sreenshot below. There is also a toast message that pops up and lets the user know that they are editing the FAQ in question. The form is prepopulated with the existing information in the two fields, question and then answer. There are two buttons on the page. One to submit the updated FAQ and the other is to cancel which will redirect the user back to the FAQ page.
+If the user is a superuser, they will see the two buttons attached to each of the FAQ cards. One is an edit button and the other is a delete button. Once the delete button is pressed, a modal will pop up ontop of anything else on the screen and ask if they are sure that they want to delete the FAQ. 
+
+![delete faq modal](testing/feature_testing/delete-faq.png)
+
+If the user clicks the edit button, they are redirected to the Edit FAQ page seen in the sreenshot below. There is also a toast message that pops up and lets the user know that they are editing the FAQ in question. The form is prepopulated with the existing information in the two fields, question and then answer. There are two buttons on the page. One to submit the updated FAQ and the other is to cancel which will redirect the user back to the FAQ page.
 
 ![edit faq](testing/feature_testing/edit-faq.png)
 
