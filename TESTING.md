@@ -167,7 +167,34 @@ User story satisfied:
 
 ### Online Payments & Checkout
 
+![checkout page](testing/feature_testing/checkout.png)
 
+Functionality:
+Once the user navigated from the basket to the checkout page, the are provided with the following form and order summary on the right of the page and the buttons to confirm the payment or go back to the basket to make some adjustments.
+
+User details - 
+
+The user details are filled in manually if the user is not authenticated. The required information here is just simply the users name and email address so that the order can be sent to the person and so that the person can be contacted in relation to their oder.
+
+Delivery details - 
+The delivery details section of the form is again manually entered until such time as the user has saved their preferred information into their profile via the profile feature outlined below. Their information can also be saved if they have placed an order in the past and opted to have information saved via the checkbox located in the form as seen in the screenshot.
+The information is quite typical of what is required to be able to send a customer their order. Phone number, address and post code.
+
+Card details - The card details section of the form is from the stripe documentation and is made to look and feel like the rest of the form. This feature communicated with the backend and in turn with stripe to send the order and payment information. Once the payment is confirmed, the user is then directed onto the checkout success page.  
+
+Buttons - In order to checkout, the user needs to submit the form to the view via the complete order button. The button on the left will take the user back to the basket to be able to make changes to their order and then go back to the checkout page again if desired. 
+
+Checkout order summary - On the right of the screen is the order summary which is designed to give the user one last look at what they are paying for. This section is similar to the basket in that it displays the basket items in lines and has a very summarised version of the relevant information as well as the subtotals and total and delivery costs. 
+
+Checkout success page and confirmation email - 
+Once the payment is successful, the user is redirected to the checkout success page as seen in the screenshot below. This page consists of the order summary and a message on the top of the screen in big writing to say thanks and that an email confirming the order will be sent to the user shortly. Also on this screen is a toast on the top right hand-side of the screen confirming the order and providing the user with the order number. On the checkout success page there is also another button to take the user back to the club shop to have one last browse before they finish up. 
+
+![checkout success page](testing/feature_testing/checkout-success.png)
+
+![order confirmation email](testing/feature_testing/order-confirmation-email.png)
+
+Conclusion:
+All of the features outlined above work as expected to satisfy the below user stories. This part of the process is quick, easy and pain-free for the customer and it informs them of exactly what is happening and what to expect.
 
 User story satisfied:
 * be able to easily enter my payment details and make payments
@@ -177,11 +204,32 @@ User story satisfied:
 
 ### Profile
 
+![user profile page](testing/feature_testing/profile.png)
+
+Functionality:
+This page is designed to allow the user to save their profile information to the site to allow them to be able to checkout more easily and efficiently for the next time they want to make a purchase. The page is made up of two sections, the user details form and the update button on the left side of the screen followed by the orders that the user has placed in the past. 
+
+The user can change their saved information at any stage and click the update profile button to make these changes take effect. 
+
+Each order that the user has made contains a link to the previous order history on via the order number as seen in the blue writing. This link will take the user back to the checkout success page with a message at the top letting the user know that this is a past order. Also on this page is button to take the user back to their profile page.
+![past order page](testing/feature_testing/past-order.png)
+
+Conclusion:
+All of the functionality on this page works as it's supposed to with the user details being pulled from the database and entered into the form if it's available during the get request in the view. The order history is also pulled and displayed in the table as expected. The user is easiy able to follow the link in the order number and view the details of that order as seen in the screenshot.
+
 User story satisfied:
 * To be able to register a profile on the site with all my details
 * To be able to view my profile details and past orders
 
 ### Contact Form
+
+![contact form](testing/feature_testing/contact-form.png)
+
+Funcionality:
+The contact form is there to give the user the ability to send the site owners a message or query as soon 
+
+Conclusion:
+
 
 User story satisfied:
 * be able to contact the site owners easily through a contact form on the site
