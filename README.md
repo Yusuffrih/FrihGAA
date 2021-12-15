@@ -91,31 +91,59 @@ I have gone to [Font Awesome](https://fontawesome.com/) for the icons that I hav
 ### Structure
 
 #### Base
-The base template is used to give the overall site the same look and feel. It holds elements that are displayed across the entire site i.e. navbar, footer, social media links the club logo and the site brand.
+The base template is used to give the overall site the same look and feel. It holds elements that are displayed across the entire site i.e. navbar, footer, social media links the club logo and the site brand. Also in the base is the banner that stretches across the screen and lets the user know that they could avail of free delivery if they spend a set amount of money on products.
 
 #### Home / Landing
+![homepage screenshot](testing/feature_testing/homepage.png)
 The landing page aims to be attractive to the user and let them know exactly what the site is at a glance. The user shouldn't have to look very far to be gently nudged to go to the products page where they can buy club merchandise.
 
 #### Products
+
+![products page screenshot](testing/feature_testing/products-page.png)
 The products will be displayed on this page. There will be options for the user to navigate to specific categories of products in the navbar or even sort by price or category. There is some basic information displayed on each product i.e. name, price, category,and an image. The products are displayed in a grid view which changes in structure depending on the screen size. More detailed product information can be viewed when the user clicks into the product. As this page will require the user to scroll down a lot to see different products, there is also a back to top button placed in the bottom right-hand corner of the screen once the user begins scrolling.
 
 If the user is a site owner, they will be able to see edit and delete buttons attached to each product. If the user clicks on the edit button, they will be taken to the edit product form where they make amendments to aspects of the product.
 
-If the user is a site owner and they want to be able to add a product, there is a link in the account link in the navbar to the product management page. They will be able to add products here. This form is very similar to the edit product form. 
+If the user is a site owner and they want to be able to add a product, there is a link in the account link in the navbar to the product management page. They will be able to add products here. This form is very similar to the edit product form.
 
 #### Product Details
+
+![product detail page screenshot](testing/feature_testing/product-detail.png)
+
 Once the user clicks into a specific product that they like, they will be taken to a the product's detail page where they can read a little bit about that product, what category it belongs to, add a chosen quantity or size (if relevant) to the basket, and view a larger version of the product image.
 
 #### Basket
+
+![basket page screenshot](testing/feature_testing/basket.png)
+
 The basket can be accessed from anywhere in the site from the navbar. The basket total will also be displayed in the navbar underneath the basket icon. Once a user clicks the 'add to basket' `button`, a `toast` will be displayed on the page giving the user an oversite of the basket and what the total is. There is also a 'proceed to checkout' `button` on the toast which will allow the user to easily access the basket and subsequently, the checkout page. On the basket page, each item that the user has added will be displayed on it's own line which will give the user various details about that item i.e. what quantity and size has been selected and a subtotal price. There is also a total cost and if the user has not spent enough to gain free delivery, how much they need to avail of this. Form here the user can edit their basket easily usin the buttons on each lineitem. Once, the user is satisfied with their basket, they can proceed to checkout.     
 
 #### Checkout
+![checkout page screenshot](testing/feature_testing/checkout.png)
+
 The checkout page consists of two columns. On the left is the form for the user to enter their delivery details and card information and click the submit button to confirm payment. In the column on the right, the user gets a last chance to view their order summary information.  
 
+Also included in the checkout app is the checkout success page which renders once the user has completed their checkout process. The checkout success page displays the order summary in a borderless table and tells the user that they will be contacted by email with details of their order shortly. There is also a button on the bottom of the order summary to allow the user to easily return to the products page. A pop up toast also displays in the top right corner of the page with the order number.
+
+![checkout success page screenshot](testing/feature_testing/checkout-success.png)
+
+#### Profile
+![user profile page](testing/feature_testing/profile.png)
+The profile page displays the users profile details if they have opted to have their information saved during an order to allow them to checkout more easily and efficiently for the next time they want to make a purchase. In terms of strucute, the page is made up of two sections, the user details form and the update button on the left side of the screen followed by the orders that the user has placed in the past. 
+
+Each order that the user has made contains a link to the previous order history on via the order number as seen in the blue writing. This link will take the user back to the checkout success page with a message at the top letting the user know that this is a past order. Also on this page is button to take the user back to their profile page.
+
+![past order page](testing/feature_testing/past-order.png)
+
 #### Contact
+
+![contact page screenshot](testing/feature_testing/contact-form.png)
 The contact page can be accessed through the link in the navbar. This page is quite simply a form, positioned on the left side of the screen on larger screens and centered on smaller ones. This form allows the user to submit a query to the site owners. They can attached their name and email to this form as well to allow the site owner to respond. 
 
 #### FAQ
+
+![FAQ page screenshot](testing/feature_testing/faq-page.png)
+
 The FAQ page will allow the user to view a list of frequently asked questions about the club. This allows the user to find out some more about the club i.e. who to contact to buy sign up to the club and purchase membership. If the user is a superuser, there are buttons attached to each FAQ to allow the site owner to edit or delete the item. At the top of the page there is an 'Add FAQ' button where the user can of course add an FAQ if they feel the need. The Add and Edit buttons will take the user to similar forms where they can input the relevant information.
 
 ### Wireframes
@@ -236,7 +264,7 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 * SQLite3
 * Auto Prefixer
 
-## Testing
+## Testing & Bugs
 Testing carried out on the site can be found [here](TESTING.md) in a separate file
 
 ## Deployment
@@ -344,10 +372,46 @@ pip freeze --local > requirements.txt
 
 15. Click the deploy button. The app should start building now. As you have linked the [Heroku](https://heroku.com/) app to your [Github](https//:github.com/) repository, all you need to do to deploy to Heroku is push to [Github](https//:github.com/) and this will automatically push to [Heroku](https://heroku.com/).
 
-### Run Locally
+For production, it's best to store the static files in [AWS - S3](https://s3.console.aws.amazon.com/s3) - Amazon Web Service and the documentation for this can be found on the official [AWS webiste](https://eu-west-1.console.aws.amazon.com/) or you can follow a Youtube tutorial on how to do this [here](https://www.youtube.com/watch?v=e6w9LwZJFIA).
 
-### Deploying in Heroku
+
+
+## Disclaimer 
+
+This project is purely for educational purposes and is not inteded for any profit or commercial reason at all. All third party material used on this site has been referenced below in the credits section.
 
 ## Credits
 
+### Images and Content 
+
+* All of the product images as well as the product descriptions on the site came from [O'Neills GAA Store](https://www.oneills.com/)
+
+* The club logo on the homepage came from the [Google Images](https://www.google.com/imghp?hl=en) when I searched for my home club's gaa logo on which the site is based. 
+
+* The about paragraph on the homepage has been lifted from [Club Info](https://www.clubinfo.ie/club/castletown-liam-mellows-gfc/) and the name Castletown GAA has been changed to Frih GAA for the purposes of this site.
+
+### Code
+
+* For a large portion of this project, used the Boutique Ado walkthrough project to guide me through this and borrowed a large amount of code to assist with the structuring of the project and the functionality also.
+
+* [Django Documentation]() was used to assist specifically with the Allauth setup and also with other aspects of setting up this Django project.
+
+* For the contact app I followed this helpful [Twilio](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid) tutorial but used by own smtp email service via [Gmail](https://google.com/gmail).
+
+* I followed the [W3 Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top) 
+
+* I used [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) throughout the devlopment of the project to provide the  navbar, footer, buttons, toasts, cards, images and links.
+
+* Any time I had a bug, I went to [Stack Overflow](https://stackoverflow.com/) to try and find out what the solution is for the issue. This is a very helpful community.
+
+* [Code Institute](https://codeinstitute.net/ie/) tutors.
+
+
 ## Final Comments
+
+As a final note on this project and on the overall course with Code Institute, I would just like to thank a few people:
+
+1. My mentor Simen Daehlin for the fantastic guidance and advice throughout this challenging time.
+2. The tutors with Code Institute as they do their absolute best to help everyone that comes to them. They are a fantastic group of people who have the patients of a saint.
+3. Everyone in the Slack Community for always being there to help each other out in times of need. You're all amazing! 
+4. My family and partner for being so patient with me over the past 11 months of the course. Thank you so much for everything!
