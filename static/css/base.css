@@ -134,7 +134,8 @@ header {
     -webkit-transition: var(--transition);
     -o-transition: var(--transition);
     transition: var(--transition);
-    border: 2px solid var(--maroon);
+    border: 2px solid var(--maroon-web);
+    margin-top: 1rem;
 }
 
 .nav-link {
