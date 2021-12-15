@@ -100,18 +100,64 @@ User story satisfied:
 
 #### Sort Products
 
+Functionality:
+There are a couple of different ways for a user to sort products in the products page. 
+1. From the navbar - by price (low-high) or categegory name by (a-z)
 
+![navbar sorting price low-high](testing/feature_testing/navbar-sorting-price.png)
+<hr>
+
+![navbar sorting category a-z](testing/feature_testing/navbar-sorting-category.png)
+
+2. From the navbar - by category
+
+![From the navbar - by category](testing/feature_testing/sorting-navbar-category-by-name.png)
+
+3. From the sort select box on the products page - by name (a-z or z-a), by price (low-high or high to low) or by category name (a-z or z-a).
+
+Conclusion:
+You can see from the screenshots that I have tested all of the above methods of sorting products and they all work as expected with products sorting in the desired manner.
 
 User story satisfied:
 * be able to sort products by Category/Price/Name
 
 ### Product Details
 
+![product details page](testing/feature_testing/product-detail.png)
+
+Functionality: 
+This page is to give the user a closer look at the product that they want to buy before they make the purchase. There is a product description and a few other details such as whether there are sizes available in this product. The user can then click one of two buttons, to add the product to the basket or to return to the club shop page to view other products. The user also has the functionality to click the amount of that product and can choose a particular size to add as well. 
+
+Once the user adds an item to the basket, the basket preview will pop up in a toast in the top right hand corner of the screen.
+
+If the product has an image, it will be displayed in the space to left of the product as seen above, however, if there is no product image, a placeholder will be there in it's place. The user can click into the product image which will open it in another tab a little bigger.
+
+Conclusion:
+This feature of the site is functioning as expected with everything working perfectly and all the functionality in order. The below user stories are being satisfied as outlined above.
+
 User story satisfied:
 * be able to see a more detailed page about a particular product
 * be able to easily add products to my basket
 
 ### Shopping Basket
+
+![basket page](testing/feature_testing/basket.png)
+
+Functionality:
+In essence, the basket feature is designed to allow the user to collect items that they would like to buy in a centralised location while the continue for more items to buy. There are other features or pieces of functionality within this though that are covered by this piece of testing. Each item that is place into the basket is displayed on a line with some basic information relevant to that item for the purchase i.e. the product image, name and size, price of the product, the quantity of that size of that product that's in the basket. If there is more than one size of the same product in the basket, it displays on a separate line. 
+
+The user can also use the qunatity increment and decrement buttons on each line item to adjust the quantity. Once they have set the quantity, they can click the update button directly under it to calculate the new subtotal. If they no longer want that product anymore, there is also the remove button that allows them to remove the product from the basket completely. This also updates the subtotal and grand total accordingly. 
+
+At the bottom of screen, the are some more general pieces of information calculated and displayed such as the overall basket subtotal excluding delivery, how much the delivery cost is, how much you would need to spend in order to avail of free delivery and then the grand total of the order. The users can then opt to go back to the club shop to browse for more products, or they can proceed to the checkout via the buttons available at the bottom of the basket. 
+
+![basket with multiple products](testing/feature_testing/basket-multiple-products.png)
+
+![basket with multiple products continued](testing/feature_testing/basket-multiple-products1.png)
+
+As seen in the images above, when the user has products place in the basket, the basket icon in the navbar changes colour and the cost of the order is rendered under the icon. As it is in the navbar, it can be seen from anywhere in the site.
+
+Conclusion:
+After going through all of the steps to add items to the basket of different sized and products and also a product with no size. The correct information was displayed of each of the products and the correct calculations were made and displayed in the correct places. The buttons on the page provide the correct outcome and bring the user to either the products page or to the checkout page where they can begin the payment process and placing their order. 
 
 User story satisfied:
 * be able to view the items in my basket from anywhere in the site
@@ -120,6 +166,8 @@ User story satisfied:
 
 
 ### Online Payments & Checkout
+
+
 
 User story satisfied:
 * be able to easily enter my payment details and make payments
@@ -153,6 +201,8 @@ User story satisfied:
 
 
 ## Bugs
+
+Below are some of the bugs that I encountered during the development of this project. One learning that I would definitely take away from reading these is to take extra care when typing. I seem to make many typing mistakes which can be very difficult to find in retrospect. 
 
 1. 
 **Issue:** When deploying to Heroku, I managed to push my postgres database url to Github. 
@@ -189,3 +239,8 @@ User story satisfied:
 **Issue:** The above bug 6 did not actually fix the overall issue that was the real emails being sent to the users was not working. This bug had me stumped for a while and I couldn't understand why the emails were being sent in development but not in production.
 
 **Fix:** Once I figured out that the issue was to do with the setup of the real emial being sent out, the fix was again, as simple as locating a typo in the Heroku environment variables. This was causing the code to not be able to locate the value for the email host password. 
+
+8. 
+**Issue:** During development, I was creating a hover state for the navbar brand button in the top left hand corner. I thought I had this created and finished but later on, during testing I discovered that if I hovered over the button on the border, it would begin jumping between the two states.
+
+**Fix:** I opened up the [Dev Tools](https://developer.chrome.com/docs/devtools/) in the browser and took a look at the element's css attributes. I discovered that when creating the hover state, I put in a typo when creating the border attribute. This caused the border to not render and ultimately caused the issue outlined above. I fixed the typo and everything functioned as expected.
