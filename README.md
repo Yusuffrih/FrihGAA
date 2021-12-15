@@ -83,10 +83,6 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
 * receive an acknowledgement email to let me know my contact form has been submitted
 * be able to view a list of FAQs on the site to find out more information about the club
 
-### User Requirements
-
-### User Expectations
-
 ## Design Choices
 ### Fonts
 For the fonts on the site, I used [Google Fonts](https://fonts.google.com/?standard-styles=). This is a really fantatic service of [Google](https://google.com) which is great for getting nearly any kind of font you want. The fonts I chose for my page are *Lato* & *Roboto* with *sans-serif* as a backup font in the event that [Google Fonts](https://fonts.google.com/?standard-styles=) does not work. The reason I decided to use *Lato* & *Roboto* is that I found them to be quite sleek fonts which would almost represent a pair of football boots. 
