@@ -1,6 +1,6 @@
 FrihGAA
 
-![Am I responsive image to go here]()
+![Am I responsive image to go here](testing/am-i-responsive.jpg)
 
 FrihGAA is my final project for the Code Institute's Professional Diploma. It is a Web Application for a fictional GAA club that satisfies the requirements of this assessment. The brief provided for this project in the Assessment handbook was to 
 
@@ -15,28 +15,40 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
   * [Fonts](#fonts)
   * [Colours](#colours)
   * [Icons](#icons)
+  * [Structure](#structure)
+    + [Base](#base)
+    + [Home / Landing](#home---landing)
+    + [Products](#products)
+    + [Product Details](#product-details)
+    + [Basket](#basket)
+    + [Checkout](#checkout)
+    + [Profile](#profile)
+    + [Contact](#contact)
+    + [FAQ](#faq)
   * [Wireframes](#wireframes)
   * [Data Schema](#data-schema)
+    + [Profiles App](#profiles-app)
+  * [Products App](#products-app)
 - [Features](#features)
-- [Features Yet To Implement](#features-yet-to-implement)
+  * [Features Implemented](#features-implemented)
+  * [Features Yet To Implement](#features-yet-to-implement)
 - [Technologies Used](#technologies-used)
   * [Languages](#languages)
   * [Frameworks & Libraries](#frameworks---libraries)
   * [Tools](#tools)
-- [Testing](#testing)
-  * [Validator Testing](#validator-testing)
-    + [HTML Validator](#html-validator)
-    + [CSS Validator](#css-validator)
-  + [Feature Testing](#feature-testing)
-  * [Lighthouse Testing](#lighthouse-testing)
-  * [Compatability Testing](#compatability-testing)
-  * [Bugs](#bugs)
+- [Testing & Bugs](#testing---bugs)
 - [Deployment](#deployment)
-  * [Run Locally](#run-locally)
-  * [Deploying in Heroku](#deploying-in-heroku)
+  * [Deploying Locally](#deploying-locally)
+    + [Cloning](#cloning)
+  * [Heroku](#heroku)
+- [Disclaimer](#disclaimer)
 - [Credits](#credits)
-  
+  * [Images and Content](#images-and-content)
+  * [Code](#code)
 - [Final Comments](#final-comments)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## User Experience (UX)
 
