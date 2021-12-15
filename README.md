@@ -152,9 +152,9 @@ When creating my wireframes, I first drew some rough sketches on paper but then 
 You will see from the wireframes that a lot has changed since the planning stage of the project as I learned a lot about what direction I wanted the project to go as I went through the development process.
 
 I created mock ups for my page to fit into the main device types - Desktop, Tablet and Mobile. The mock-ups for the devices can be found here: 
-* [Mobile]()
-* [Tablet]()
-* [Desktop]()
+* [Mobile](wireframes/mobile/mobile.png)
+* [Tablet](wireframes/tablet/tablet.png)
+* [Desktop](wireframes/desktop/desktop.png)
 
 ### Data Schema
 Django is compatible with SQL databases by default and so I used SQLite in development and then used a PostgresQL database in the deployed site which is provided by [Heroku](https://id.heroku.com/login). 
