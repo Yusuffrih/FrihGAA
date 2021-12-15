@@ -24,7 +24,7 @@
                 <form method="POST" action="{% url 'add_faq' %}" class="form mb-2">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <div class="text-right mb-4">
+                    <div class="text-center mb-4">
                         <a class="btn btn-light btn-lg" href="{% url 'faq' %}">Cancel</a>
                         <button class="btn btn-lg bg-maroon" type="submit">Add FAQ</button>
                     </div>
