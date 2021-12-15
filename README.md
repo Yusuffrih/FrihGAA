@@ -167,6 +167,8 @@ I created mock ups for my page to fit into the main device types - Desktop, Tabl
 ### Data Schema
 Django is compatible with SQL databases by default and so I used SQLite in development and then used a PostgresQL database in the deployed site which is provided by [Heroku](https://id.heroku.com/login). 
 
+![drawsql screenshot](media/readme/draw-sql.jpg)
+
 **User model**
 
 Django provides, via django.contrib.auth.models, a ready to use User model which is what is being utilised in this project.
