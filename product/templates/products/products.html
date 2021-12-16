@@ -111,13 +111,13 @@
 {{ block.super }}
     <script>
         $('#sort-selector').change(function() {
-            const selector = $(this);
-            const currentUrl = new URL(window.location);
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
         
-            const selectedVal = selector.val();
+            var selectedVal = selector.val();
             if(selectedVal != "reset"){
-                const sort = selectedVal.split("_")[0];
-                const direction = selectedVal.split("_")[1];
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
         
                 currentUrl.searchParams.set("sort", sort);
                 currentUrl.searchParams.set("direction", direction);
