@@ -2,6 +2,10 @@ from django.db import models
 
 
 class Category(models.Model):
+    """
+    Product Category model
+    for maintaining categories structure
+    """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -22,6 +26,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    A product model for mainting the
+    structure of the products information
+    """
     category = models.ForeignKey(
         'Category',
         null=True,
