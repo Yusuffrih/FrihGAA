@@ -52,13 +52,15 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
 
 ## User Experience (UX)
 
-### Site Owner Goals
+### Site Owner Goals & User Stories
 **As the site owner, I would like:**
 * Access the admin section of the site
 * To Create, Read, Update and Delete items in the database from a centralised location through the admin app
 * Club members to be able to easily contact the club via the site's contact form
 * To sell club merchandise through the site
 * Give the club a professional look and feel to attract new members
+* To be able to provide club members information about the club via the FAQ section on the site
+* To be able to add, edit and delete FAQs from the site easily and intuitively
 
 ### User Stories
 **As a user, I want to:**  
@@ -76,7 +78,7 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
 * be able to adjust the quantity of products in the basket, from the basket
 * be able to checkout from the basket page
 * be able to easily enter my payment details and make payments
-* be able to hava my delivery and payment details autofill in checkout once I have a profile
+* be able to hav a my delivery and payment details autofill in checkout once I have a profile
 * recieve an order confirmation email directly after checkout
 * be able to search the site for products or membership types using keywords in the search bar
 * be able to contact the site owners easily through a contact form on the site
