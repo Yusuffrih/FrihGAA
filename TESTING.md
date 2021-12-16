@@ -1,12 +1,36 @@
 # Testing
 
+- [Validator Testing](#validator-testing)
+  * [HTML Validator](#html-validator)
+  * [CSS Validator](#css-validator)
+- [Lighthouse Testing](#lighthouse-testing)
+- [Compatability & Responsiveness Testing](#compatability---responsiveness-testing)
+- [User Story & Feature Testing](#user-story---feature-testing)
+  * [Navbar](#navbar)
+  * [User Authentication - Allauth](#user-authentication---allauth)
+  * [Club Shop](#club-shop)
+    + [Display Products](#display-products)
+    + [Search bar](#search-bar)
+    + [Sort Products](#sort-products)
+  * [Product Details](#product-details)
+  * [Shopping Basket](#shopping-basket)
+  * [Online Payments & Checkout](#online-payments---checkout)
+  * [Profile](#profile)
+  * [Contact Form](#contact-form)
+  * [FAQs](#faqs)
+  * [Footer](#footer)
+- [Bugs](#bugs)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Validator Testing 
 ### HTML Validator
 
-
+All HTML validation was successfull. The screenshots can be seen [here](testing/validator/html) 
 
 ### CSS Validator
-CSS Validator showed no errors.
+CSS Validator showed no errors. View the screenshot [here](testing/validator/css/css-validator.png)
 
 ## Lighthouse Testing
 Lighthouse testing was carried out on all pages on both [desktop](testing/lighthouse/desktop) and [mobile](testing/lighthouse/mobile)
