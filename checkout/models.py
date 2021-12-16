@@ -11,6 +11,7 @@ from profile.models import UserProfile
 
 
 class Order(models.Model):
+    """ Order model"""
     order_number = models.CharField(
         max_length=32,
         null=False,
@@ -136,6 +137,7 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """ Order Line Items model """
     order = models.ForeignKey(
         Order, null=False,
         blank=False,

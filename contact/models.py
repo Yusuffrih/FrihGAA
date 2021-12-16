@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Contact(models.Model):
-    
-    
+    """ Contact app's model """
+
     class Meta:
         verbose_name = 'Contact'
 
