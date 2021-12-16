@@ -286,30 +286,30 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 ## Technologies Used
 
 ### Languages
-* HTML
-* CSS
-* Javacript
-* Python
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [Javacript](https://www.javascript.com/)
+* [Python](https://www.python.org/)
 
 ### Frameworks & Libraries
-* Bootstrap
-* Google Fonts
-* Font Awesome
-* JQuery
-* Stripe
+* [Bootstrap](https://getbootstrap.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [JQuery](https://jquery.com/)
+* [Stripe](https://stripe.com/ie)
 
 ### Tools
-* Heroku
-* Django
-* Gitpod
-* Git
-* Balsamic
-* DrawSQL
-* W3 HTML Validation
-* W3 CSS Validation
-* AWS
-* SQLite3
-* Auto Prefixer
+* [Heroku](https://heroku.com/)
+* [Django](https://www.djangoproject.com/)
+* [Gitpod](https://gitpod.io/)
+* [Git](https://git-scm.com/)
+* [Balsamic](https://balsamiq.com/wireframes/?gclid=Cj0KCQiA5OuNBhCRARIsACgaiqVeyFQpiJYxBhbFHUdLpUxj0Adv_bY69FWGj64tmp0_cgs14rPxfKsaAkJMEALw_wcB)
+* [DrawSQL](https://drawsql.app/)
+* [W3 HTML Validation](https://validator.w3.org/)
+* [W3 CSS Validation](https://jigsaw.w3.org/css-validator/)
+* [AWS](https://portal.aws.amazon.com/billing/signup#/start)
+* [SQLite3](https://www.sqlite.org/index.html)
+* [Auto Prefixer](https://autoprefixer.github.io/)
 
 ## Testing & Bugs
 Testing carried out on the site can be found [here](TESTING.md) in a separate file
