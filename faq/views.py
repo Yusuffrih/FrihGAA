@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Faq
 from .forms import FaqForm
@@ -18,6 +19,7 @@ def faq(request):
     return render(request, template, context)
 
 
+@login_required
 def add_faq(request):
     """ Add an faq to the database and faq page """
 
@@ -47,6 +49,7 @@ def add_faq(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_faq(request, faq_id):
     """ Edit an faq """
     if not request.user.is_superuser:
@@ -77,6 +80,7 @@ def edit_faq(request, faq_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_faq(request, faq_id):
     """ Delete an faq """
     if not request.user.is_superuser:
