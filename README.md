@@ -174,17 +174,18 @@ Django is compatible with SQL databases by default and so I used SQLite in devel
 Django provides, via django.contrib.auth.models, a ready to use User model which is what is being utilised in this project.
 
 #### Profiles App
-**Profile model**
+**UserProfile model**
 
 | Name | Database Key | Field Type | Type Validation |
 | :-------------: |:----------------:| :--------------: | :---------: |
 |User | user |	OneToOneField 'User'| on_delete=models.CASCADE
 |Default Phone Number |	default_phone_number | CharField | max_length=20, null=True, blank=True
-|Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
-|Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
-|Default Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
 |Default Street Address1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
 |Default Street Address2 | default_street_address2 | CharField | max_length=80, null=True, blank=True
+|Default Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+|Default County | default_county | CharField | max_length=80, null=True, blank=True
+|Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
+|Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
 
 ### Products App
 **Category model**
@@ -199,12 +200,46 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 | Name | Database Key | Validation | Field Type|
 | :-------------: |:----------------:| :--------------: | :---------: |
 |Product id | id | primary_key=True | AutoField
+|Category | category | ForeignKey |default='', max_length=254 | CharField
 |Name | name | default='', max_length=254 | CharField
-|Description | content | blank=False | TextField
+|Description | description | blank=True | TextField
 |Has Sizes | has_sizes | BooleanField | default=False, null=True, blank=True
 |Price | price | max_digits=6, decimal_places=2 | DecimalField
+|Image URL | image_url | blank=False | URLField
 |Image| image| blank=False | ImageField
-|Rating | rating | blank=True | DecimalField
+
+#### Checkout App
+**Order model**
+
+| Name              | Database Key    | Field Type    | Type Validation                                                                       |
+|-------------------|-----------------|---------------|---------------------------------------------------------------------------------------|
+| Order Number      | order_number    | CharField     | max_length=32, null=False, editable=False                                             |
+| User Profile      | user_profile    | ForeignKey    | UserProfile, on_delete=models.SET_NULL , null=True, blank=True, related_name='orders' |
+| Full Name         | full_name       | CharField     | max_length=50, null=False, blank=False                                                |
+| Email             | email           | EmailField    | max_length=254, null=False, blank=False                                               |
+| Phone Number      | phone_number    | CharField     | max_length=20, null=False, blank=False                                                |
+| Country           | country         | CountryField  | blank_label='Country'*, null=False, blank=False                                       |
+| Postcode          | postcode        | CharField     | max_length=20, null=True, blank=True                                                  |
+| Town or City      | town_or_city    | CharField     | max_length=40, null=False, blank=False                                                |
+| Street Address 1  | street_address1 | CharField     | max_length=80, null=False, blank=False                                                |
+| Street Address 2  | street_address2 | CharField     | max_length=80, null=False, blank=False                                                |
+| County            | county          | CharField     | max_length=80, null=False, blank=False                                                |
+| Date              | date            | DateTimeField | auto_now_add=True                                                                     |
+| Delivery Cost     | delivery_cost   | DecimalField  | max_digits=6, decimal_places=2, null=False, default=0                                 |
+| Order Total       | order_total     | DecimalField  | max_digits=10, decimal_places=2, null=False, default=0                                |
+| Grand Total       | grand_total     | Decimal Field | max_digits=10, decimal_places=2, null=False, default=0                                |
+| Original Basket   | original_basket | TextField     | null=False, blank=False, default=''                                                   |
+| Stripe Payment ID | stripe_pid      | CharField     | max_length=254, null=False, blank=False, default=''                                   |
+
+**Order Line Item model**
+
+| Name            | Database Key   | Field Type   | Type Validation                                                                    |
+|-----------------|----------------|--------------|------------------------------------------------------------------------------------|
+| Order           | order          | ForeignKey   | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
+| Product         | product        | ForeignKey   | Product, null=False, blank=False, on_delete=models.CASCADE                         |
+| Product Size    | product_size   | CharField    | max_length=2, null=True, blank=True                                                |
+| Quantity        | quantity       | IntegerField | null=False, blank=False, default=0                                                 |
+| Line Item Total | lineitem_total | DecimalField | max_length=6, decimal_places=2, null=False, blank=False, editable=False            |
 
 
 **FAQ Model**
