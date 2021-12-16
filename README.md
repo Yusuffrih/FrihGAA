@@ -9,8 +9,6 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
 - [User Experience (UX)](#user-experience--ux-)
   * [Site Owner Goals](#site-owner-goals)
   * [User Stories](#user-stories)
-  * [User Requirements](#user-requirements)
-  * [User Expectations](#user-expectations)
 - [Design Choices](#design-choices)
   * [Fonts](#fonts)
   * [Colours](#colours)
@@ -28,7 +26,10 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
   * [Wireframes](#wireframes)
   * [Data Schema](#data-schema)
     + [Profiles App](#profiles-app)
-  * [Products App](#products-app)
+    + [Products App](#products-app)
+    + [Checkout App](#checkout-app)
+    + [FAQ App](#faq-app)
+    + [Contact App](#contact-app)
 - [Features](#features)
   * [Features Implemented](#features-implemented)
   * [Features Yet To Implement](#features-yet-to-implement)
@@ -38,9 +39,8 @@ FrihGAA is my final project for the Code Institute's Professional Diploma. It is
   * [Tools](#tools)
 - [Testing & Bugs](#testing---bugs)
 - [Deployment](#deployment)
-  * [Deploying Locally](#deploying-locally)
-    + [Cloning](#cloning)
-  * [Heroku](#heroku)
+  * [Local Development](#local-development)
+  * [Heroku Deployment & AWS](#heroku-deployment---aws)
 - [Disclaimer](#disclaimer)
 - [Credits](#credits)
   * [Images and Content](#images-and-content)
@@ -187,7 +187,7 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 |Default Postcode | default_postcode | CharField | max_length=20, null=True, blank=True
 |Default Country | default_country | CountryField | blank_label='country', null=True, blank=True
 
-### Products App
+#### Products App
 **Category model**
 
 | Name | Database Key | Field Type | Type Validation |
@@ -241,7 +241,7 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 | Quantity        | quantity       | IntegerField | null=False, blank=False, default=0                                                 |
 | Line Item Total | lineitem_total | DecimalField | max_length=6, decimal_places=2, null=False, blank=False, editable=False            |
 
-
+#### FAQ App
 **FAQ Model**
 | Name     | Database Key | Field Type | Type Validation                              |
 |----------|--------------|------------|----------------------------------------------|
@@ -249,6 +249,8 @@ Django provides, via django.contrib.auth.models, a ready to use User model which
 | Question | question     | TextField  | max_length= 300 , null= False , blank= False |
 | Answer   | answer       | TextField  | max_length= 900 , null= False , blank= False |
 
+
+#### Contact App
 **Contact Model**
 | Name    | Database Key | Field Type | Type Validation                          |
 |---------|--------------|------------|------------------------------------------|
@@ -317,11 +319,11 @@ Testing carried out on the site can be found [here](TESTING.md) in a separate fi
 Note: When deploying my project initially, I pushed my database url to Github. Luckily, I had no data in my database and it was easy for me to delete my postgres database and create a new one. This nuetralised any threat that there may have been to the app. Also, committed and pushed SQLite3 Database & SECRET_KEY to the [Github](https://github.com) repository, however, I deleted a the SQLite3 Database, created a new one and added it to the .gitignore file. I also generated a new SECRET_KEY and stored it as an environment variable in [Gitpod](https://gitpod.io).
 
 
-### Deploying Locally
+### Local Development
 
 [Gitpod](https://gitpod.io/) was used for the development of this project and so the following deployments step-by-step process is specific to [Gitpod](https://gitpod.io/) and may vary with other [IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment). 
 
-#### Cloning
+**Cloning**
 1. Once you are at the project repository in [Github](https://github.com/), you click on the code button and then download the repository zip file. Another way to do it is to use the following code in the terminal:
 ``` 
 git clone https://github.com/Yusuffrih/CI_MS4_FrihGAA.git
@@ -330,8 +332,15 @@ git clone https://github.com/Yusuffrih/CI_MS4_FrihGAA.git
 ```
 pip3 install -r requirements.txt
 ```
-3. Create any sensitive or private environment variables in you IDE settings. This will ensure that they are not in the code that is being pushed to the public repository. 
-![Gitpod environment variables screenshot goes here]()
+3. Create any sensitive or private environment variables in you IDE settings (if using gitpod) or in an `env.py` file. This will ensure that they are not in the code that is being pushed to the public repository. 
+```
+import os 
+os.environ["DEVELOPMENT"] = "True"   
+os.environ["SECRET_KEY"] = "<Your Secret Key>"
+os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public Key>"   
+os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret Key>"   
+os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>" 
+```
 4. Then you have to migrate the models to create the database using the following command.
 ```
 python3 manage.py migrate
@@ -346,12 +355,12 @@ Once the command is entered, you will be prompted to input the username, email a
 python3 manage.py runserver
 ```
 
-### Heroku
+### Heroku Deployment & AWS
 1. Create a [Heroku](https://id.heroku.com/) or login to create a new app. Once you have chosen a Heroku app name, you must then choose the region that is closest to you. Ensure your app is connected to the relevant [Github](https://github.com/) repository to allow for automatic deployment to [Heroku](https://heroku.com/).
 2. The default database that is installed with [Django](https://www.djangoproject.com/) is [SQLite3](https://www.sqlite.org/releaselog/3_36_0.html). However, when you deploy to [Heroku](https://id.heroku.com/) and go to production mode, you will want to change to another database such as [Postgres](https://www.postgresql.org/). To add this to your project, go to resources and search *Postgres*. Click on it and submit the order form.
 
-3. This will provide you with a database url for your project. To access it, go to settings in [Heroku](https://id.heroku.com/) and reveal the *Config Vars*.
-![Config Variables screenshot here]()
+3. This will provide you with a database url for your project. To access it, go to settings in [Heroku](https://id.heroku.com/) and reveal the `Config Variables`.
+![Config Variables screenshot here](media/readme/heroku-cvars.png)
 
 4. Copy and paste the Environment Variavle into your settings.py file instead of the database that is there already. 
 ```
